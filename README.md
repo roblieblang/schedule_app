@@ -9,7 +9,7 @@ Clone the repositiory to your local machine.
 #### Backend
 
 1. From root directory of project, create a virtual environment with: `python -m venv ./venv`
-2. Activate virtual environment: `.\venv\Scripts\activate` or `.\venv\bin\activate` or whatever the path to your activate script is
+2. Activate virtual environment: `.\venv\Scripts\activate` or `.\venv\bin\activate` or `PATH_TO_ACTIVATE_SCRIPT`
 3. `pip install -r requirements.txt`
 4. `python .\manage.py migrate`
 5. Good to go: `python .\manage.py runserver`
