@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" class="d-flex flex-column h-100">
+    <nav-bar />
     <!-- add a side nav bar component later -->
     <div class="container flex-grow-1">
       <error />
@@ -12,19 +13,23 @@
       <p>Your schedule needs improvement!</p>
     </div>
     <footer class="bg-light p-3">
-      <p>this is some text in the footer</p>
+      
     </footer>
   </div>
 </template>
 
 <script>
+import NavBar from "./components/NavBar.vue";
+import Error from "./components/Error.vue";
 
 export default {
   name: 'App',
   components: {
+    NavBar, 
+    Error
     
   }
-}
+};
 </script>
 
 <style>
