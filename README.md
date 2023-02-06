@@ -17,6 +17,7 @@ Clone the repositiory to your local machine.
 #### Frontend
 
 1. Message @roblieblang to get the `.env` needed for the app to work with Auth0
+  a. Place it in the root of the `frontend` directory
 2. Change directory to frontend `cd .\frontend\`
 3. Install dependencies: `npm install`
 4. `npm start`
