@@ -14,6 +14,7 @@ function App() {
   } else {
     return (
       <Routes>
+        {/* wern;aljksdnf;ljkasndf */}
         <Route path="/" exact element={<WelcomePage />} />
         <Route path="/profile" exact element={<ProfilePage/>} />
       </Routes>
