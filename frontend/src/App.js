@@ -1,25 +1,24 @@
-import LoginButton from "./components/LoginButton";
-import LogoutButton from "./components/LogoutButton";
-import Profile from "./components/Profile";
+import WelcomePage from "./pages/WelcomePage";
+import ProfilePage from "./pages/ProfilePage";
+
 import { useAuth0 } from "@auth0/auth0-react";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const { isLoading, error } = useAuth0();
 
-  return (
-    <main className="column">
-      <h1>Schedule App</h1>
-      {error && <p>Authentication Error</p>}
-      {!error && isLoading && <p>Loading...</p>}
-      {!error && !isLoading && (
-        <>
-          <LoginButton />
-          <LogoutButton />
-          <Profile />
-        </>
-      )}
-    </main>
-  );
+  if (!error && isLoading) {
+    return <p>Loading...</p>
+  } else if (error) {
+    return <p>Authentication Error!</p>
+  } else {
+    return (
+      <Routes>
+        <Route path="/" exact element={<WelcomePage />} />
+        <Route path="/profile" exact element={<ProfilePage/>} />
+      </Routes>
+    );
+  }
 }
 
 export default App;

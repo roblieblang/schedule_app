@@ -1,11 +1,11 @@
 import { useAuth0 } from '@auth0/auth0-react';
 
-const Profile = () => {
+const ProfileInfo = () => {
     const { user, isAuthenticated } = useAuth0();
 
     return (
         isAuthenticated && (
-            <article className='column'>
+            <article>
                 {user?.picture && <img src={user.picture} alt={user?.name} />}
                 <h2>{user?.name}</h2>
                 <ul>
@@ -13,7 +13,7 @@ const Profile = () => {
                 </ul>
             </article>
         )
-    )
+    );
 }
 
-export default Profile
+export default ProfileInfo;
