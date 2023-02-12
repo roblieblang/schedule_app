@@ -1,10 +1,11 @@
-import WelcomePage from "./pages/WelcomePage";
+import React from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
+import { Routes, Route } from 'react-router-dom';
+import WelcomePage  from "./pages/WelcomePage";
 import ProfilePage from "./pages/ProfilePage";
+import Dashboard from './pages/DashboardPage';
 
-import { useAuth0 } from "@auth0/auth0-react";
-import { Routes, Route } from "react-router-dom";
-
-function App() {
+export default function App() {
   const { isLoading, error } = useAuth0();
 
   if (!error && isLoading) {
@@ -14,12 +15,11 @@ function App() {
   } else {
     return (
       <Routes>
-        {/* wern;aljksdnf;ljkasndf */}
         <Route path="/" exact element={<WelcomePage />} />
+        <Route path = "/dashboard" exact element={<Dashboard />} />
         <Route path="/profile" exact element={<ProfilePage/>} />
+        
       </Routes>
     );
   }
 }
-
-export default App;
