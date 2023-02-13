@@ -1,4 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react';
+import './ProfileInfo.css';
 
 const ProfileInfo = () => {
     const { user, isAuthenticated } = useAuth0();
