@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from "../components/navBars/Header";
+import NavBar from "../components/navBars/NavBar";
 
 function DashboardPage() {
   return (
     <>
-    <Header />
+    <NavBar />
     <div className='dashboard-page'>
       <h1>Dashboard Page</h1>
       
