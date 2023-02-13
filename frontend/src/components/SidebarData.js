@@ -13,19 +13,19 @@ export const SidebarData = [
   {
     title: "Profile",
     path: "/profile",
-    icon: <IoIcons.IoIosPaper />,
+    icon: <IoIcons.IoIosPerson />,
     cName: "nav-text",
   },
   {
     title: "Calendar",
     path: "/calendar",
-    icon: <FaIcons.FaCartPlus />,
+    icon: <FaIcons.FaCalendar />,
     cName: "nav-text",
   },
   {
     title: "Dashboard",
     path: "/dashboard",
-    icon: <IoIcons.IoMdPeople />,
+    icon: <IoIcons.IoIosListBox />,
     cName: "nav-text",
   },
 ];
