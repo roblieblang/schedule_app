@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { StyledEngineProvider } from '@mui/material/styles';
 import App  from './App';
 
 import './index.css';
@@ -25,7 +26,9 @@ root.render(
         redirectUri={`${window.location.origin}/dashboard`}
         cacheLocation="localstorage"
       >
-        <App />
+        <StyledEngineProvider injectFirst>
+          <App />
+        </StyledEngineProvider>
       </Auth0Provider>
     </BrowserRouter>
   </React.StrictMode>,
