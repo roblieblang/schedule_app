@@ -12,7 +12,7 @@ export default function DashboardPage() {
     return (
       <>
         <NavBar />
-        <Grid container
+        <Grid 
           sx={{ 
             width: headerNavBarWidth-34,
             height: "85vh",
@@ -27,8 +27,6 @@ export default function DashboardPage() {
           {/* <DashboardItems /> */}
           {/* <Box sx={{backgroundColor: "#D9D9D9", width:"304px", height: "186px", borderRadius: '16px'}}></Box> */}
           <Box sx={{backgroundColor: "#D9D9D9", width:"304px", height: "186px", borderRadius: '16px'}}></Box>
-
-            
         </Grid>
       </>
     );
