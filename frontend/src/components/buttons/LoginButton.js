@@ -9,7 +9,7 @@ export default function LoginButton() {
   const handleLogin = async () => {
     await loginWithRedirect({
       appState: {
-        returnTo: '/dashboard',
+        returnTo: `/dashboard`,
       },
       authorizationParams: {
         prompt: 'login',
