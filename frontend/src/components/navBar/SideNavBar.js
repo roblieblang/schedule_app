@@ -1,4 +1,4 @@
-import { Drawer, List, ListItemText, ListItemIcon, ListItemButton, Divider } from '@mui/material';
+import { Drawer, List, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
 import {CalendarMonth, Schedule, FactCheck, Dashboard} from '@mui/icons-material/';
 import Typography  from '@mui/material/Typography';
 
@@ -6,7 +6,7 @@ export const drawerWidth = 240
 
 const scheduleMenuItems =[
     {text: "Dashboard", icon: <Dashboard />, path: "/dashboard"},
-    {text: "Calendar", icon: <CalendarMonth />, path: ""},
+    {text: "Calendar", icon: <CalendarMonth />, path: "/calendar"},
 ];
 const chronotypeMenuItems =[
     {text: "My Chronotype", icon: <Schedule />, path: ""},
@@ -39,11 +39,10 @@ export  function SideNavBar() {
                         >
                             <ListItemIcon sx={{mr: -3}}>{item.icon}</ListItemIcon>
                             <ListItemText primary={item.text} />
-                        </ListItemButton>
+                        </ListItemButton>                    
                     ))}    
                 </List>
             </div>
-            <Divider />
             <div>
                 <Typography variant="h6" sx={{ml: 2}}>
                     Chronotypes
