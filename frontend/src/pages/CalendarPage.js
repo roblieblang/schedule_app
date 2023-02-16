@@ -1,32 +1,34 @@
-
 import React from 'react'
-import '../components/calendar/CalendarBoard.css'
+import CalendarBoard from '../components/calendar/CalendarBoard';
+import CalendarFiller from "../components/calendar/CalendarFiller";
+import '../components/calendar/CalendarBoard.css';
 import dayjs from "dayjs";
 import {useState} from 'react';
+import Calendar from 'react-calendar'; 
 import './CalendarPage.css';
-import NavBar from '../components/navBar/MainNavBar'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import timeGridPlugin from '@fullcalendar/timegrid'
-import interactionPlugin from '@fullcalendar/interaction'
-import { INITIAL_EVENTS, createEventId } from './event-utils'
+import NavBar from '../components/navBar/MainNavBar';
+import { Box } from '@mui/system';
 
-export default class DemoApp extends React.Component {
+const CalendarPage = () => {
+    const [date, setDate] = useState(new Date())
 
-    render() {
-      return (
+    return (
         <>
-        <NavBar />
-        <FullCalendar
-          plugins={[ dayGridPlugin, interactionPlugin ]}
-          dateClick={this.handleDateClick}
-        />
+            <NavBar />
+            <Box sx={{ml: 32, mt: -5, mr: 10}}>
+                <div className='app'>
+                    <h1>This is the Calendar Page</h1>
+                    <h1 classname='header'>React Calendar</h1>
+                    <div className='calendar-container'>
+                        <Calendar onChange={setDate} value={date}/>
+                    </div>
+                    <div className='text-center'>
+                        Selected date: {date.toDateString()}
+                    </div>
+                </div>
+            </Box>
         </>
-      )
-    }
-  
-    handleDateClick = (arg) => { // bind with an arrow function
-      alert(arg.dateStr)
-    }
-  
-  }
+    )
+}
+
+export default CalendarPage;
