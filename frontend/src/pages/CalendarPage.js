@@ -1,9 +1,10 @@
+
 import React from 'react'
-import '../components/calendar/CalendarBoard.css';
+import '../components/calendar/CalendarBoard.css'
 import dayjs from "dayjs";
 import {useState} from 'react';
 import './CalendarPage.css';
-import NavBar from '../components/navBar/MainNavBar';
+import NavBar from '../components/navBar/MainNavBar'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
