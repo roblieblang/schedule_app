@@ -19,7 +19,7 @@ export default function  HeaderNavBar() {
                 }}
             >
                 <Toolbar sx={{color: "black"}}>
-                    <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
+                    <IconButton size='large' edge='start' color='inherit' aria-label='logo' href="/dashboard">
                         <EventNoteIcon />
                     </IconButton>
                     <Typography variant='h5' component='div' sx={{ flexGrow: 1}}>
