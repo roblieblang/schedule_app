@@ -7,7 +7,6 @@ import SelectField from '../components/inputs/SelectField';
 import DashboardCard from '../components/dashboard/DashboardCard';
 import LineChart from '../components/charts/LineChart';
 
-
 export default function DashboardPage() {
   const { isAuthenticated } = useAuth0();
   if (isAuthenticated)

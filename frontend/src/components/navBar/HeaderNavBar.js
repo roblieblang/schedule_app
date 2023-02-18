@@ -24,7 +24,7 @@ export default function  HeaderNavBar() {
                     </IconButton>
                     <Typography variant='h5' component='div' sx={{ flexGrow: 1}}>
                         CALMMOTH
-                    </Typography>
+                   </Typography>
                     <Stack direction='row' spacing={2}>
                         <ProfileNavMenu />
                     </Stack>
