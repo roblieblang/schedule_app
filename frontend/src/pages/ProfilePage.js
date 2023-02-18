@@ -11,10 +11,10 @@ function ProfilePage() {
   return (
     <div>
       <h1>Profile Page</h1>
-
       <img src={user.picture} alt='' />
       <h2>{user.name}</h2>
-      <p>{user.email}</p></div>
+      <p>{user.email}</p>
+    </div>
   );
 }
 

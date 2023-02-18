@@ -30,9 +30,6 @@ const WelcomePage = () => {
             }
         </div>
      
-
-
-
     
     );
 }
