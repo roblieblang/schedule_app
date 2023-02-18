@@ -9,14 +9,19 @@
     "@fontsource/roboto": "^4.5.8",
     "@mui/base": "^5.0.0-alpha.118",
     "@mui/icons-material": "^5.11.9",
+    "@mui/lab": "^5.0.0-alpha.120",
     "@mui/material": "^5.11.9",
+    "@mui/x-date-pickers": "^5.0.19",
+    "@nivo/line": "^0.80.0",
     "axios": "^0.27.2",
+    "date-fns": "^2.29.3",
     "dayjs": "^1.11.7",
-    "react": "^18.2.0",
     "react-calendar": "^4.0.0",
+    "react-date-range": "^1.4.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "5.0.0"
+    "react-scripts": "5.0.0",
+    "rsuite": "^5.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
