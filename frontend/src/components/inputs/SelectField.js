@@ -4,9 +4,9 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { MenuList } from '@mui/material';
 
 export default function SelectField({ optionToSelect, options }) {
+
   const [option, setOption] = React.useState('');
 
   const handleChange = (event) => {
@@ -18,9 +18,9 @@ export default function SelectField({ optionToSelect, options }) {
   );
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 110 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">{optionToSelect}</InputLabel>
+        <InputLabel id="demo-simple-select-label" sx={{fontSize: 14 }}>{optionToSelect}</InputLabel>
         <Select
           labelId="select-field-label"
           id="select-field"

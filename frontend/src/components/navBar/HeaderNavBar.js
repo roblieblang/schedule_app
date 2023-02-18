@@ -23,7 +23,7 @@ export default function  HeaderNavBar() {
                         <EventNoteIcon />
                     </IconButton>
                     <Typography variant='h5' component='div' sx={{ flexGrow: 1}}>
-                        SCHEDULE APP
+                        CALMMOTH
                     </Typography>
                     <Stack direction='row' spacing={2}>
                         <ProfileNavMenu />
