@@ -16,7 +16,7 @@ const WelcomePage = () => {
             <img className='img1' src={require("./calendar.png")} alt= "Calender" />
             <p> This site will help you organize your busy schedule </p>
 
-            <img className='img2' src={require("./Mascot.png")} />
+            <img className='img2' src={require("./Mascot.png")}alt= "Mascot" />
             
 
             

@@ -30,6 +30,7 @@ body {
 
     width: 299px;
     height: 320px;
+
 }
 
 
@@ -51,7 +52,6 @@ p {
 
     font-family: Poppins;
     font-style: normal;
-    position: fixed;
     left: 495px;
     bottom: 320px;
 
