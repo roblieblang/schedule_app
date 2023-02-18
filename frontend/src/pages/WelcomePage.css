@@ -1,0 +1,82 @@
+h1{
+font-family: Poppins;
+font-style: normal;
+font-weight: 700;
+font-size: 90px;
+
+padding-top: 20px;
+padding-bottom: 20px;
+color: white;
+text-align: center;
+
+text-shadow: 2px 2px #bbbbbb;;
+}
+
+
+
+body {
+    background-color:#56B195;
+    position: static;
+
+
+}
+
+.img1 {
+
+    position: fixed;
+    left: 450px;
+
+
+
+    width: 299px;
+    height: 320px;
+}
+
+
+.img2 {
+
+    width: 299px;
+    height: 320px;
+    transform: scalex(-1);
+
+    position: fixed;
+    right: 390px;
+}
+
+
+
+p {
+
+    position: fixed;
+
+    font-family: Poppins;
+    font-style: normal;
+    position: fixed;
+    left: 495px;
+    bottom: 320px;
+
+    font-weight: 400;
+
+    font-size: 27px;
+
+    color: white;
+}
+
+button {
+
+    font-size: 100000px;
+    position: fixed;
+    left: 600px;
+    top: 450px;
+
+  width: 350px;
+  height: 115px;
+  border-radius: 20px;
+
+  border-color: aqua;
+  color: white;
+
+  background-color: black;
+    
+    
+}
