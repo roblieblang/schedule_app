@@ -14,7 +14,7 @@ function LogoutButton() {
   };
 
   return (
-    <Button onClick={handleLogout} type="button">
+    <Button variant="contained" onClick={handleLogout} type="button">
       Log Out
     </Button>
   );

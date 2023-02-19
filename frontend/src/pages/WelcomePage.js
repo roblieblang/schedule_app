@@ -10,11 +10,11 @@ const WelcomePage = () => {
 
     return (
         <div className='welcome-page'>
-            <center><h1> Schedule App</h1></center>
+            <h1 className='h1Class'> Schedule App</h1>
              
       
             <img className='img1' src={require("./calendar.png")} alt= "Calender" />
-            <p> This site will help you organize your busy schedule </p>
+            <p className='pClass'> This site will help you organize your busy schedule </p> 
 
             <img className='img2' src={require("./Mascot.png")}alt= "Mascot" />
             
@@ -22,9 +22,9 @@ const WelcomePage = () => {
             
             
             { isAuthenticated ? (
-                <LogoutButton/> ) : (
+                <LogoutButton className = 'buttonClass'/> ) : (
                     <>
-                        <LoginButton type='button'>  </LoginButton>
+                        <LoginButton className = 'buttonClass' type='button'>  </LoginButton>
                     </> 
                 ) 
             }
