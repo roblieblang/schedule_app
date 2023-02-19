@@ -19,8 +19,6 @@ const WelcomePage = () => {
             <img className='img2' src={require("./Mascot.png")}alt= "Mascot" />
             
 
-            
-            
             { isAuthenticated ? (
                 <div className='buttonClass1'>
                 <LogoutButton/> </div> ) :(

@@ -29,7 +29,7 @@
     
     }
     
-    .img1 {
+    /*.img1 {
     
         position: fixed;
         left: 28rem;
@@ -42,10 +42,27 @@
         width: 299px;
         height: 320px;
     
+    }*/
+
+    .img1 {
+    
+        position: relative;
+        left: 29rem;
+    
+        bottom: 0rem;
+    
+    
+    
+    
+        width: 299px;
+        height: 320px;
+    
     }
     
     
-    .img2 {
+    /*.img2 {
+
+        position: relative;
     
         width: 299px;
         height: 320px;
@@ -55,19 +72,32 @@
     
         position: fixed;
         right: 390px;
+    }*/
+    
+
+    .img2 {
+
+        position: relative;
+    
+        width: 299px;
+        height: 320px;
+        transform: scalex(-1);
+        bottom: 22rem;
+        left: 50rem;
+
     }
     
     
-    
     .pClass {
+        position: relative;
     
-        position: fixed;
     
         font-family: Poppins;
         font-style: normal;
         left: 31rem;
         right: 19rem;
-        bottom: 18rem;
+        bottom: 0rem;
+        top: 4rem;
     
         font-weight: 400;
     
@@ -93,4 +123,4 @@
     .buttonClass1:hover button{
         
         background-color: rgb(75, 78, 78);
-    }
+    } 
