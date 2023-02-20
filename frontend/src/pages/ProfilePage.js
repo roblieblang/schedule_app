@@ -17,7 +17,7 @@ function ProfilePage() {
     <div>
       <h1>Profile</h1>
       <img src={user.picture} alt=''
-      style={{  width: 200, height: 200,  position:"absolute" , left:125 , top:180, zIndex: 999}}
+      style={{  width: 200, height: 200,  position:"absolute" , left:125 , top:1800, zIndex: 999}}
       />
       <div id="box1">
       <li>{user.name}</li>
