@@ -9,7 +9,7 @@ const scheduleMenuItems =[
     {text: "Calendar", icon: <CalendarMonth />, path: "/calendar"},
 ];
 const chronotypeMenuItems =[
-    {text: "My Chronotype", icon: <Schedule />, path: ""},
+    {text: "My Chronotype", icon: <Schedule />, path: "/mychronotype"},
     {text: "Interesting Facts", icon: <FactCheck />, path: ""},
 ]
 
