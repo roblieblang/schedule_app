@@ -3,9 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Box } from '@mui/system';
 import './ProfilePage.css';
 import ProfileCard from '../components/profile/ProfileCard';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
+import { borders } from '@mui/system'
 
 
 function ProfilePage() {
@@ -19,40 +17,34 @@ function ProfilePage() {
     <div>
       <h1>Profile</h1>
       <img src={user.picture} alt=''
-      style={{  width: 200, height: 200,  position:"absolute" , left:20 , top:150}}
+      style={{  width: 200, height: 200,  position:"absolute" , left:125 , top:180, zIndex: 999}}
       />
-      <h2>{user.name}</h2>
-      <h3>{user.email}</h3>
-      <style>{'body { background-color: lightgrey; }'}</style>
+      <div id="box1">
+      <li>{user.name}</li>
+      <li>{user.email}</li>
+      <li>Age:</li>
+      <li>My Chronotype: </li>
+      <style>{'body { background-color:#E0E0E0; }'}</style>
+      </div>
       <Box 
-            gridColumn="span 1" 
-            display="flex" 
-            alignItems="center" 
-            justifyContent="center"
+      style={{
+      position: 'absolute', 
+      left: '40%', 
+      top: '25%',
+      transform: 'translate(-50%, -50%)'
+  }}
           >
             <ProfileCard 
               card={ 
                 {
-                  "Name": "busiestCalendar", 
-                  "title": "Busiest Calendar", 
-                  "mainContent": "Your busiest calendar was {user calendar with most events}."
+                  "Name": "Info", 
+                  "title": "Info", 
+                  "mainContent": "Full Name, Email, Phone, Address"
                 }
               }
             />
           </Box>
 
-          <div style={{ display: 'block', width: 700, padding: 30 }}></div>
-          <Container className='p-4'>  
-          <Col md={3}>  
-          <ListGroup>  
-         <ListGroup.Item>List Item 1</ListGroup.Item>  
-         <ListGroup.Item>List Item 2</ListGroup.Item>  
-         <ListGroup.Item>List Item 3</ListGroup.Item>  
-         <ListGroup.Item>List Item 4</ListGroup.Item>  
-         <ListGroup.Item>List Item 5</ListGroup.Item>  
-          </ListGroup>  
-          </Col>  
-          </Container>  
               </div>
   );
 }
