@@ -1,0 +1,39 @@
+h1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 20;
+    font-size: 3rem;
+    
+    padding-top: 3rem;
+    padding-bottom: 20rem;
+    color: white;
+    text-align: center;
+    
+    text-shadow: 2rem rem #bbbbbb;;
+    }
+
+
+    h2{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 20;
+        font-size: 3rem;
+        
+        padding-top: 3rem;
+        padding-bottom: 20rem;
+        color: white;
+        text-align: center;
+        
+        text-shadow: 2rem rem #bbbbbb;;
+        }
+    body {
+        background-color:#56B195;
+        position: static;
+    
+    
+    }
+
+    .name{
+        padding-top: 3rem;
+        padding-bottom: 20rem; 
+    }
