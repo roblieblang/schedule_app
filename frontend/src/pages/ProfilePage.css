@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .head1{
     font-family: Poppins;
     font-style:normal;
@@ -5,12 +6,23 @@
     font-size: 2.123rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+=======
+h1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 20;
+    font-size: 3rem;
+    
+    padding-top: 3rem;
+    padding-bottom: 20rem;
+>>>>>>> 9854160 (1)
     color: white;
     text-align: center;
     
     text-shadow: 2rem rem #bbbbbb;;
     }
 
+<<<<<<< HEAD
     .head2{
         font-family: Poppins;
         font-style: normal;
@@ -65,6 +77,22 @@
     }
 
 
+=======
+
+    h2{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 20;
+        font-size: 3rem;
+        
+        padding-top: 3rem;
+        padding-bottom: 20rem;
+        color: white;
+        text-align: center;
+        
+        text-shadow: 2rem rem #bbbbbb;;
+        }
+>>>>>>> 9854160 (1)
     body {
         background-color:#56B195;
         position: static;
@@ -75,6 +103,7 @@
     .name{
         padding-top: 3rem;
         padding-bottom: 20rem; 
+<<<<<<< HEAD
     }
 
     .item{
@@ -89,3 +118,6 @@
         border-radius: 2rem;
         font-weight: 20rem;
       } 
+=======
+    }
+>>>>>>> 9854160 (1)
