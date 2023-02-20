@@ -1,7 +1,6 @@
 import React from 'react'
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from '../components/buttons/LoginButton';
-import SignupButton from './../components/buttons/SignupButton';
 import LogoutButton from './../components/buttons/LogoutButton';
 import './WelcomePage.css';
 
@@ -9,26 +8,32 @@ const WelcomePage = () => {
     const { isAuthenticated } = useAuth0();
 
     return (
+
         <div className='welcome-page'>
-            <center><h1> Schedule App</h1></center>
+            <h1 className='h1Title'> CALMMOTH </h1>
              
       
             <img className='img1' src={require("./calendar.png")} alt= "Calender" />
-            <p> This site will help you organize your busy schedule </p>
+            <p className='pClass'> This site will help you organize your busy schedule </p> 
 
-            <img className='img2' src={require("./Mascot.png")} />
-            
+            <img className='img2' src={require("./Mascot.png")}alt= "Mascot" />
 
-            
-            
-            { isAuthenticated ? (
-                <LogoutButton/> ) : (
+
+                { isAuthenticated ? (
+                <div className='buttonClass1'>
+                <LogoutButton/> </div> ) :(
                     <>
-                        <LoginButton type='button'>  </LoginButton>
+                    
+
+                    <div className='buttonClass1'>
+                        <LoginButton  type='button'> </LoginButton>
+                    </div>
                     </> 
                 ) 
             }
+
         </div>
+
      
     
     );
