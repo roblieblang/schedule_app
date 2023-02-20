@@ -17,9 +17,9 @@ const WelcomePage = () => {
             <p className='pClass'> This site will help you organize your busy schedule </p> 
 
             <img className='img2' src={require("./Mascot.png")}alt= "Mascot" />
-            
 
-            { isAuthenticated ? (
+
+                { isAuthenticated ? (
                 <div className='buttonClass1'>
                 <LogoutButton/> </div> ) :(
                     <>
@@ -31,6 +31,7 @@ const WelcomePage = () => {
                     </> 
                 ) 
             }
+
         </div>
 
      
