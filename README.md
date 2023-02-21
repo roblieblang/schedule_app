@@ -4,9 +4,11 @@ CSC 394: Group 3's Capstone Project
 
 ## Setup
 
-Clone the repositiory to your local machine.
+- Clone the repositiory to your local machine
 
 #### Backend
+
+1. Install nvm on your machine
 
 #### Frontend
 
