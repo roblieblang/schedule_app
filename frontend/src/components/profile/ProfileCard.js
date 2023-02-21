@@ -5,9 +5,9 @@ import { CardContent, Typography } from "@mui/material";
 export default function ProfileCard({ card }) {
     return (
         <Card 
-            sx={{
-                backgroundColor: "#f6f6f6",
-                borderRadius: 2,
+            px={{
+                backgroundColor: "#white",
+                borderRadius: 5,
             }}
         >
             <CardContent>

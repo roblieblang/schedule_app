@@ -1,21 +1,50 @@
+<<<<<<< HEAD
+.head1{
+=======
 h1{
+>>>>>>> 98541604ac8080d1be0c57c04704fe600316743f
     font-family: Poppins;
     font-style: normal;
     font-weight: 20;
     font-size: 3rem;
     
+<<<<<<< HEAD
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+=======
     padding-top: 3rem;
     padding-bottom: 20rem;
+>>>>>>> 98541604ac8080d1be0c57c04704fe600316743f
     color: white;
     text-align: center;
     
     text-shadow: 2rem rem #bbbbbb;;
     }
 
-    li {
-        margin-top: 10rem; /* Prevent double borders */
-        background-color: #f6f6f6;
-        padding: 10rem;
+<<<<<<< HEAD
+    .head2{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 3 rem;
+        font-size: 3 rem;
+        
+        padding-top: 3rem;
+        padding-bottom: 20rem;
+        color: black;
+        text-align: center;
+        
+        text-shadow: 2rem rem #bbbbbb;
+        position: relative; 
+        right: 31rem;
+        top: 15rem;
+        z-index: 999;
+    }
+    
+
+    .box1 li {
+        background-color: whitesmoke;
+        display:inline-block;
+        padding: 1.5rem;
         display: flex;
         align-items: center;
         /*border-width: 2ex 1.25ex 0.5ex;*/
@@ -24,11 +53,10 @@ h1{
         position: relative; 
         right: 6.5rem;
         top: 8rem;
-      }
-        
-       
+      } 
+    
 
-      #box1 {
+      .box1 {
         padding-top: 0rem;
         width: 3rem;
         height: 30rem;
@@ -48,6 +76,22 @@ h1{
     }
 
 
+=======
+
+    h2{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 20;
+        font-size: 3rem;
+        
+        padding-top: 3rem;
+        padding-bottom: 20rem;
+        color: white;
+        text-align: center;
+        
+        text-shadow: 2rem rem #bbbbbb;;
+        }
+>>>>>>> 98541604ac8080d1be0c57c04704fe600316743f
     body {
         background-color:#56B195;
         position: static;
@@ -58,4 +102,21 @@ h1{
     .name{
         padding-top: 3rem;
         padding-bottom: 20rem; 
+<<<<<<< HEAD
     }
+
+    .item{
+        background-color: whitesmoke;
+        display:inline-block;
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        border: 2rem;
+        height: 2rem;
+        width: 30rem;
+        border-radius: 2rem;
+        font-weight: 20rem;
+      } 
+=======
+    }
+>>>>>>> 98541604ac8080d1be0c57c04704fe600316743f
