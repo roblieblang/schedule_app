@@ -11,11 +11,12 @@ import './pages/App.css';
 export default function App() {
   const { isLoading, error } = useAuth0();
 
-  if (!error && isLoading) {
-    return <p>Loading...</p>
-  } else if (error) {
-    return <p>Authentication Error!</p>
-  } else {
+  if (isLoading) {
+    return <div>Loading...</div>
+  }  
+  if (error) {
+    return <div>Error: {error.message}</div>
+  } 
     return (
       <div>
       <Routes>
@@ -28,4 +29,3 @@ export default function App() {
       </div>
     );
   }
-}
