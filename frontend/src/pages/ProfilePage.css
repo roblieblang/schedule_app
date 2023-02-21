@@ -1,27 +1,16 @@
-<<<<<<< HEAD
 .head1{
-=======
-h1{
->>>>>>> 98541604ac8080d1be0c57c04704fe600316743f
     font-family: Poppins;
-    font-style: normal;
-    font-weight: 20;
-    font-size: 3rem;
-    
-<<<<<<< HEAD
-    padding-top: 1rem;
+    font-style:normal;
+    font-weight: 1rem;
+    font-size: 2.123rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
-=======
-    padding-top: 3rem;
-    padding-bottom: 20rem;
->>>>>>> 98541604ac8080d1be0c57c04704fe600316743f
     color: white;
     text-align: center;
     
     text-shadow: 2rem rem #bbbbbb;;
     }
 
-<<<<<<< HEAD
     .head2{
         font-family: Poppins;
         font-style: normal;
@@ -36,7 +25,7 @@ h1{
         text-shadow: 2rem rem #bbbbbb;
         position: relative; 
         right: 31rem;
-        top: 15rem;
+        top: 13.5rem;
         z-index: 999;
     }
     
@@ -68,7 +57,7 @@ h1{
         display: table-cell;
         padding: 8px 0 0;
         position: fixed;
-        top: 25%;
+        top: 20%;
         left: 25%;
         margin-top: -50px;
         margin-left: -300px;
@@ -76,22 +65,6 @@ h1{
     }
 
 
-=======
-
-    h2{
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 20;
-        font-size: 3rem;
-        
-        padding-top: 3rem;
-        padding-bottom: 20rem;
-        color: white;
-        text-align: center;
-        
-        text-shadow: 2rem rem #bbbbbb;;
-        }
->>>>>>> 98541604ac8080d1be0c57c04704fe600316743f
     body {
         background-color:#56B195;
         position: static;
@@ -102,7 +75,6 @@ h1{
     .name{
         padding-top: 3rem;
         padding-bottom: 20rem; 
-<<<<<<< HEAD
     }
 
     .item{
@@ -117,6 +89,3 @@ h1{
         border-radius: 2rem;
         font-weight: 20rem;
       } 
-=======
-    }
->>>>>>> 98541604ac8080d1be0c57c04704fe600316743f
