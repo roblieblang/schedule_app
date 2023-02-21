@@ -45,18 +45,14 @@
     }*/
 
     .img1 {
-    
+
         position: relative;
-        left: 29rem;
-    
-        bottom: 0rem;
-    
-    
-    
-    
-        width: 18.688rem;
-        height: 20rem;
-    
+
+        display: block;
+        margin-left: 32%;
+        margin-right: auto;
+        width: 19%;
+
     }
     
     
