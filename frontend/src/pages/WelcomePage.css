@@ -4,7 +4,7 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 700;
-    font-size: 5.625rem;
+    font-size: 5.625vmax;
     
     padding-top: 2rem;
     padding-bottom: 1rem;
@@ -25,98 +25,70 @@
         height: 100%;
         background-color:#56B195;
         position: fixed;
-    
-    
+
+
     }
-    
-    /*.img1 {
-    
-        position: fixed;
-        left: 28rem;
-    
-        bottom: 24rem;
-    
-    
-    
-    
-        width: 299px;
-        height: 320px;
-    
-    }*/
+
 
     .img1 {
 
         position: relative;
 
         display: block;
-        margin-left: 32%;
+        margin-left: 30%;
         margin-right: auto;
-        width: 19%;
+        width: 18%;
 
-    }
-    
-    
-    /*.img2 {
+    } 
 
-        position: relative;
-    
-        width: 299px;
-        height: 320px;
-        transform: scalex(-1);
-    
-        bottom: 24rem;
-    
-        position: fixed;
-        right: 390px;
-    }*/
-    
+
+
 
     .img2 {
 
-        position: relative;
-    
-        width: 18.688rem;
-        height: 20rem;
+        position: absolute;
+        top: 19%;
+        left: 51%;
+        width: 19.2%;
         transform: scalex(-1);
-        bottom: 22rem;
-        left: 50rem;
+
 
     }
-    
-    
+
+
     .pClass {
         position: relative;
-    
-    
+
+
         font-family: Poppins;
         font-style: normal;
-        left: 31rem;
-        right: 19rem;
-        bottom: 0rem;
-        top: 4rem;
-    
+
+        text-align: center;
+
+       padding: 5%;
+
         font-weight: 400;
-    
-        font-size: 27px;
-    
+
+        font-size: 1.8vmax;
+
         color: white;
     }
-    
+
     .buttonClass1 button {
-        position: fixed;
-        left: 37rem;
-        top: 40rem;
+        position: relative;
+        left: 39%;
+        bottom: 15%;
         font-size: large;
-    
-        width: 21.875rem;
-        height: 7.188rem;
+
+        width: 23%;
+        height: 20%;
         border-radius: 1.25rem; 
-    
+
         background-color: black;
-        
+
     }
 
     .buttonClass1:hover button{
-        
+
         background-color: rgb(75, 78, 78);
     }
