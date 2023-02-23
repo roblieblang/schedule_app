@@ -2,7 +2,7 @@ import React from 'react'
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from '../components/buttons/LoginButton';
 import LogoutButton from './../components/buttons/LogoutButton';
-import './WelcomePage.css';
+import '../stylesheets/welcome/WelcomePage.css';
 
 const WelcomePage = () => {
     const { isAuthenticated } = useAuth0();
@@ -13,10 +13,10 @@ const WelcomePage = () => {
             <h1 className='h1Title'> CALMMOTH </h1>
              
       
-            <img className='img1' src={require("./calendar.png")} alt= "Calender" />
+            <img className='img1' src={require("../images/calendar/calendar.png")} alt= "Calender" />
             <p className='pClass'> This site will help you organize your busy schedule </p> 
 
-            <img className='img2' src={require("./Mascot.png")}alt= "Mascot" />
+            <img className='img2' src={require("../images/mascots/Mascot.png")}alt= "Mascot" />
 
 
                 { isAuthenticated ? (

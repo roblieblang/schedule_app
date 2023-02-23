@@ -6,7 +6,7 @@ import ProfilePage from "./pages/ProfilePage";
 import CalendarPage from "./pages/CalendarPage.js"
 import Dashboard from './pages/DashboardPage';
 import MyChronotypePage from './pages/MyChronotypePage.js';
-import './pages/App.css';
+import './App.css';
 
 export default function App() {
   const { isLoading, error } = useAuth0();
