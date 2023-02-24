@@ -4,7 +4,7 @@ import CalendarFiller from "../components/calendar/CalendarFiller";
 import dayjs from "dayjs";
 import {useState} from 'react';
 import Calendar from 'react-calendar'; 
-import './CalendarPage.css';
+import '../stylesheets/calendar/CalendarPage.css';
 import NavBar from '../components/navBar/MainNavBar';
 import FullCalendar from '@fullcalendar/react'
 import formatDate from '@fullcalendar/react'
