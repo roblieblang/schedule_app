@@ -1,0 +1,20 @@
+
+    
+    /*Alternative CSS Centering Code with the "body" Selector*/
+
+    .h1Classes {
+        text-decoration: antiquewhite;
+        font-size: 30%;
+    }
+    
+    .bodyClass {
+    
+      text-align: center;
+      margin: auto;
+      font-family: 'Lexend Deca', sans-serif;  
+      
+      position: static;
+
+    
+     
+    }
