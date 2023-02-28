@@ -1,34 +1,37 @@
 import React from 'react'
 import CalendarBoard from '../components/calendar/CalendarBoard';
 import CalendarFiller from "../components/calendar/CalendarFiller";
-import '../components/calendar/CalendarBoard.css';
 import dayjs from "dayjs";
 import {useState} from 'react';
 import Calendar from 'react-calendar'; 
 import './CalendarPage.css';
 import NavBar from '../components/navBar/MainNavBar';
-import { Box } from '@mui/system';
+import FullCalendar from '@fullcalendar/react'
+import formatDate from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
+import interactionPlugin from '@fullcalendar/interaction'
 
-const CalendarPage = () => {
-    const [date, setDate] = useState(new Date())
+export default class DemoApp extends React.Component {
 
-    return (
+    render() {
+      return (
         <>
-            <NavBar />
-            <Box sx={{ml: 32, mt: -5, mr: 10}}>
-                <div className='app'>
-                    <h1>This is the Calendar Page</h1>
-                    <h1 classname='header'>React Calendar</h1>
-                    <div className='calendar-container'>
-                        <Calendar onChange={setDate} value={date}/>
-                    </div>
-                    <div className='text-center'>
-                        Selected date: {date.toDateString()}
-                    </div>
-                </div>
-            </Box>
+        <NavBar />
+        <FullCalendar
+          plugins={[ dayGridPlugin, interactionPlugin ]}
+          dateClick={this.handleDateClick}
+          events={[
+            { title: 'Meeting 1', date: '2023-02-16' },
+            { title: 'Meeting 2', date: '2023-02-18' }
+          ]}
+        />
         </>
-    )
-}
-
-export default CalendarPage;
+      )
+    }
+  
+    handleDateClick = (arg) => { // bind with an arrow function
+      alert(arg.dateStr)
+    }
+  
+  }

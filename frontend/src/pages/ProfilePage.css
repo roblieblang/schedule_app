@@ -1,31 +1,69 @@
-h1{
+.head1{
     font-family: Poppins;
-    font-style: normal;
-    font-weight: 20;
-    font-size: 3rem;
-    
-    padding-top: 3rem;
-    padding-bottom: 20rem;
+    font-style:normal;
+    font-weight: 1rem;
+    font-size: 2.123rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     color: white;
     text-align: center;
-    
     text-shadow: 2rem rem #bbbbbb;;
     }
 
 
-    h2{
+    .head2{
         font-family: Poppins;
         font-style: normal;
-        font-weight: 20;
+        font-weight: 3rem;
         font-size: 3rem;
-        
         padding-top: 3rem;
         padding-bottom: 20rem;
-        color: white;
+        color: black;
         text-align: center;
-        
-        text-shadow: 2rem rem #bbbbbb;;
-        }
+        text-shadow: 2rem rem #bbbbbb;
+        position: relative; 
+        right: 35%;
+        top: 11.5rem;
+        z-index: 999;
+    }
+    
+
+    .box1 li {
+        background-color: whitesmoke;
+        display:inline-block;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        /*border-width: 2ex 1.25ex 0.5ex;*/
+        height: 2rem;
+        width: 13rem;
+        position: relative; 
+        right: 6.5rem;
+        top: 8rem;
+      } 
+    
+
+      .box1 {
+        padding-top: 0rem;
+        width: 3rem;
+        height: 30rem;
+        border: 10rem solid whitesmoke;
+        margin: 5rem;
+        text-align: center;
+        background: transparent;
+        vertical-align: top;
+        display: table-cell;
+        padding: 8px 0 0;
+        position: fixed;
+        top: 20%;
+        left: 25%;
+        margin-top: -50px;
+        margin-left: -300px;
+        border-radius: 2rem;
+    }
+
+
+
     body {
         background-color:#56B195;
         position: static;
@@ -36,4 +74,18 @@ h1{
     .name{
         padding-top: 3rem;
         padding-bottom: 20rem; 
+
     }
+
+    .item{
+        background-color: whitesmoke;
+        display:inline-block;
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        border: 2rem;
+        height: 2rem;
+        width: 30rem;
+        border-radius: 2rem;
+        font-weight: 20rem;
+      } 

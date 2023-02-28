@@ -6,6 +6,8 @@ import ProfileCard from '../components/profile/ProfileCard';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 
 function ProfilePage() {
@@ -17,42 +19,35 @@ function ProfilePage() {
 
   return (
     <div>
-      <h1>Profile</h1>
+      <h1 className='head1'>Profile</h1>
       <img src={user.picture} alt=''
-      style={{  width: 200, height: 200,  position:"absolute" , left:20 , top:150}}
+      style={{width: 200, height: 200,  position:"absolute", left:'8%', top:'17%', zIndex: 999, borderRadius:400}}
       />
-      <h2>{user.name}</h2>
-      <h3>{user.email}</h3>
-      <style>{'body { background-color: lightgrey; }'}</style>
+      <h2 className='head2'>{user.name}</h2>
+      <div className='box1'>
+      <li>Age:</li>
+      <li>Occupation: </li>
+      <li>My Chronotype: </li>
+      <style>{'body { background-color:#E0E0E0; }'}</style>
+      </div>
       <Box 
-            gridColumn="span 1" 
-            display="flex" 
-            alignItems="center" 
-            justifyContent="center"
+      style={{
+      position: 'absolute', 
+      left: '40%', 
+      top: '25%',
+      transform: 'translate(-50%, -50%)'
+  }}
           >
-            <ProfileCard 
-              card={ 
-                {
-                  "Name": "busiestCalendar", 
-                  "title": "Busiest Calendar", 
-                  "mainContent": "Your busiest calendar was {user calendar with most events}."
-                }
-              }
-            />
+    <Card style={{ width: '45rem', height:'22rem', position:"absolute" , left:'-10rem' , top:'-5.5rem', borderRadius:'2rem', backgroundColor: 'whitesmoke'}}>
+      <ListGroup variant="flush">
+        <ListGroup.Item className="item">Name: {user.name}</ListGroup.Item>
+        <ListGroup.Item className="item">Email: {user.email}</ListGroup.Item>
+        <ListGroup.Item className="item">Phone: </ListGroup.Item>
+        <ListGroup.Item className="item">Address:</ListGroup.Item>
+      </ListGroup>
+    </Card>
+          
           </Box>
-
-          <div style={{ display: 'block', width: 700, padding: 30 }}></div>
-          <Container className='p-4'>  
-          <Col md={3}>  
-          <ListGroup>  
-         <ListGroup.Item>List Item 1</ListGroup.Item>  
-         <ListGroup.Item>List Item 2</ListGroup.Item>  
-         <ListGroup.Item>List Item 3</ListGroup.Item>  
-         <ListGroup.Item>List Item 4</ListGroup.Item>  
-         <ListGroup.Item>List Item 5</ListGroup.Item>  
-          </ListGroup>  
-          </Col>  
-          </Container>  
               </div>
   );
 }
