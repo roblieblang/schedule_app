@@ -17,7 +17,7 @@ function ProfilePage() {
     <div>
       <h1 className='head1'>Profile</h1>
       <img src={user.picture} alt=''
-      style={{  width: 200, height: 200,  position:"absolute" , left:125 , top:150, zIndex: 999, borderRadius:400}}
+      style={{width: 200, height: 200,  position:"absolute", left:'8%', top:'17%', zIndex: 999, borderRadius:400}}
       />
       <h2 className='head2'>{user.name}</h2>
       <div className='box1'>

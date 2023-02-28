@@ -14,16 +14,16 @@
     .head2{
         font-family: Poppins;
         font-style: normal;
-        font-weight: 3 rem;
-        font-size: 3 rem;
+        font-weight: 3rem;
+        font-size: 3rem;
         padding-top: 3rem;
         padding-bottom: 20rem;
         color: black;
         text-align: center;
         text-shadow: 2rem rem #bbbbbb;
         position: relative; 
-        right: 31rem;
-        top: 13.5rem;
+        right: 35%;
+        top: 11.5rem;
         z-index: 999;
     }
     
