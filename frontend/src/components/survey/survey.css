@@ -33,3 +33,9 @@
   
       background-color: rgb(75, 78, 78);
   }
+
+
+
+  .normal {
+    line-break: normal;
+}
