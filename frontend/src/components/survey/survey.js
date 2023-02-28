@@ -1,9 +1,8 @@
 import React from "react";
-import { MDBBtn, MDBContainer, MDBRadio } from "mdb-react-ui-kit";
+import { MDBContainer, MDBRadio } from "mdb-react-ui-kit";
 import { useState } from 'react';
 import SubmitSurvey from "../buttons/SurveySubmitButton";
 import "./survey.css";
-import { SettingsSystemDaydreamRounded } from "@mui/icons-material";
 
 
 
