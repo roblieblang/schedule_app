@@ -27,7 +27,9 @@
     "react-dom": "18.2.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.0",
-    "rsuite": "^5.27.0"
+    "rsuite": "^5.27.0",
+    "survey-core": "^1.9.75",
+    "survey-react-ui": "^1.9.75"
   },
   "scripts": {
     "start": "react-scripts start",
