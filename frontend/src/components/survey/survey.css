@@ -14,7 +14,22 @@
       font-family: 'Lexend Deca', sans-serif;  
       
       position: static;
-
-    
      
     }
+
+
+    .buttonClass11 button {
+
+      height: 6vh;
+
+  
+      width: 9%;
+  
+      background-color: black;
+  
+  }
+  
+  .buttonClass11:hover button{
+  
+      background-color: rgb(75, 78, 78);
+  }

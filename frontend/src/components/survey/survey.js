@@ -1,7 +1,9 @@
 import React from "react";
-import { MDBBtn, MDBCol, MDBContainer, MDBRadio, MDBRow } from "mdb-react-ui-kit";
+import { MDBBtn, MDBContainer, MDBRadio } from "mdb-react-ui-kit";
 import { useState } from 'react';
+import SubmitSurvey from "../buttons/SurveySubmitButton";
 import "./survey.css";
+import { SettingsSystemDaydreamRounded } from "@mui/icons-material";
 
 
 
@@ -15,9 +17,7 @@ export default function Card() {
        setLion (Lion+1);   
     }
 
-    const decLion = () => {
-      setLion (Lion-1);   
-   }
+    
 
 
     const [Dolphin, setDolphin] = useState(0);
@@ -33,9 +33,6 @@ export default function Card() {
        setWolf(Wolf+1);   
     }
 
-    const decWolf = () => {
-      setWolf (Wolf-1);   
-   }
 
 
     const [Bear, setBear] = useState(0);
@@ -64,6 +61,10 @@ export default function Card() {
     }
 
 
+    const [name, setName] = useState('');
+    const [occupation, setOccupation] = useState('');
+
+
     
   return (
 
@@ -75,10 +76,36 @@ export default function Card() {
                 <br></br>
 
               <form>
+
+                  <br></br>
+
+                <label> Enter Name:</label>
+                <br></br>
+                <input
+                  className="normal"
+                  type='text'
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  />
+
+                  <br></br>
+                  <br></br>
+
+                <label> Enter Occupation:</label>
+                <br></br>
+                <input
+                  type='text'
+                  required
+                  value={occupation}
+                  onChange={(e) => setOccupation(e.target.value)}
+                  />
+
+                <br></br>
+                <br></br>
                 
                 <p> Do you have energy in the morning?</p>
                 <MDBRadio
-                  className="MDBRadio1"
                   name="flexRadioDefault"
                   id="flexRadioDefault1"
                   label="Yes"
@@ -125,14 +152,14 @@ export default function Card() {
 
                 <p>Do you like to collaborate with others?</p>
                 <MDBRadio
-                name="q3"
-                id="q3o1"
+                name="q31"
+                id="q31o1"
                 label="Yes"
                 onClick={CounterBear}
                 />
                 <MDBRadio
-                name="q3"
-                id="q3o2"
+                name="q31"
+                id="q31o2"
                 label="No"
                 onClick={CounterWolf}
                 />
@@ -298,10 +325,11 @@ export default function Card() {
               </form>
 
               <br></br>
-
-              <div> {chronotype}!</div>;
              
-                <MDBBtn>Submit</MDBBtn>
+                <div className="buttonClass11">  <SubmitSurvey> Submit Quiz </SubmitSurvey> </div>
+
+                <br></br>
+
               </body>
         </MDBContainer>
       );
