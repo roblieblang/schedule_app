@@ -15,6 +15,11 @@ function ProfilePage() {
   return (
     <div>
       <h1 className='head1'>Profile</h1>
+      <button className='BackButton' type='button'
+      onClick={(e) => {
+        e.preventDefault();
+        window.location.href='/dashboard';
+      }}>Back</button>
       <Box sx={{ml: 20, mt: 10, mr: 0}}>
       <ProfileCard/>
       </Box>
