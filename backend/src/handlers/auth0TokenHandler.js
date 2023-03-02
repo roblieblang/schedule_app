@@ -1,0 +1,44 @@
+require('dotenv').config()
+// const fs = require('fs').promises;
+const axios = require( 'axios');
+const express = require ('express');
+const path = require ('path');
+const { authenticate } = require ('@google-cloud/local-auth');
+const { google } = require ("googleapis");
+
+
+// wrap in a get request route
+/* 
+  app.get("/token/${uid}", getGoogleAccessToken) {
+    res.send(getGoogleAccessToken(uid));
+  }
+*/
+
+async function getGoogleAccessToken(user_id){
+    // Auth0 management API token request
+  const tokenReqParamsBody = JSON.stringify({client_id: process.env.AUTH0_CLIENT_ID,client_secret: process.env.AUTH0_CLIENT_SECRET,audience: `https://${process.env.AUTH0_DOMAIN}/api/v2/`,grant_type:"client_credentials"} )
+  let tokenReqParams = {
+    url: `https://${process.env.AUTH0_DOMAIN}/oauth/token`,
+    headers: { 'content-type': 'application/json' },
+    body: tokenReqParamsBody
+  };
+  const { data } = await axios.post(tokenReqParams.url, tokenReqParams.body, { headers: tokenReqParams.headers });
+  const accessToken = data.access_token;
+  // console.log("data: ", data);
+  // console.log("access token:", accessToken);
+  
+  // Google access token request
+  let userReqParams = {
+    url: `https://${process.env.AUTH0_DOMAIN}/api/v2/users/${user_id}`,
+    headers: {authorization: `Bearer ${accessToken}`}
+  };
+  const user = await axios.get(userReqParams.url, { headers: userReqParams.headers });
+  const googleIdPAccessToken = user.data.identities[0].access_token;
+  console.log("google IdP access token:", googleIdPAccessToken);
+  return googleIdPAccessToken;
+  // console.log(userReqParams)
+  // console.log(user.data)
+};
+
+// getGoogleAccessToken(process.env.TEST_USER_ID);
+module.exports = getGoogleAccessToken;
