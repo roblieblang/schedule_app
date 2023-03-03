@@ -3,8 +3,10 @@
     position: static;
     font-family: Poppins;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 700%;
     font-size: 5.625rem;
+
+
     
     padding-top: 2rem;
     padding-bottom: 1rem;
@@ -16,77 +18,82 @@
     
     text-shadow: 2px 2px #bbbbbb;;
     }
+    
+    
+    .welcome-page {
 
-.welcome-page {
+        width: 100%;
+        height: 100%;
+        background-color:#56B195;
+        position: fixed;
+    
+    
+    }
+    
 
-    width: 100%;
-    height: 100%;
-    background-color:#56B195;
-    position: fixed;
+    .img1 {
+
+        position: relative;
+    
+        display: block;
+        margin-left: 30%;
+        margin-right: auto;
+        width: 18%;
+    
+    } 
+    
+    
+    
+
+    .img2 {
+
+        position: absolute;
+        top: 19%;
+        left: 51%;
+        width: 19.2%;
+        transform: scalex(-1);
+      
+
+    }
+    
+    
+    .pClass {
+        position: relative;
+    
+    
+        font-family: Poppins;
+        font-style: normal;
+
+        text-align: center;
+
+       padding: 5%;
+    
+        font-weight: 400;
+    
+        font-size: 1.8vmax;
+    
+        color: white;
+    }
 
 
-}
 
+   
+    
+    .buttonClass1  button {
+        position: relative;
+        left: 39%;
+        height: 12vh;
+        bottom: 15%;
+        font-size: large;
 
-.img1 {
+        width: 23%;
+        border-radius: 1.25rem; 
 
-    position: relative;
+        background-color: black;
+        
+    }
 
-    display: block;
-    margin-left: 30%;
-    margin-right: auto;
-    width: 18%;
-
-} 
-
-
-
-
-.img2 {
-
-    position: absolute;
-    top: 19%;
-    left: 51%;
-    width: 19.2%;
-    transform: scalex(-1);
-
-
-}
-
-
-.pClass {
-    position: relative;
-
-
-    font-family: Poppins;
-    font-style: normal;
-
-    text-align: center;
-
-   padding: 5%;
-
-    font-weight: 400;
-
-    font-size: 1.8vmax;
-
-    color: white;
-}
-
-.buttonClass1 button {
-    position: relative;
-    left: 39%;
-    bottom: 15%;
-    font-size: large;
-
-    width: 23%;
-    height: 12vh;
-    border-radius: 1.25rem; 
-
-    background-color: black;
-
-}
-
-.buttonClass1:hover button{
-
-    background-color: rgb(75, 78, 78);
-}
+    .buttonClass1:hover button{
+        
+        background-color: rgb(75, 78, 78);
+    }
