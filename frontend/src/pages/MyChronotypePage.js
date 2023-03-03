@@ -6,6 +6,7 @@ import ChronotypeTimeline from '../components/chronotype/ChronotypeTimeline';
 import SurveyButton from '../components/buttons/SurveyButton';
 import '../stylesheets/mychronotype/chronotype.css';
 
+
 const MyChronotypePage = () => {
    
     return (
@@ -16,6 +17,7 @@ const MyChronotypePage = () => {
             <Box sx={{ml: 32, mt: -5, mr: 10}}>
                 
                 <ChronoSummary/>
+                <p className='timeline-title'>Ideal Daily Timeline</p>
                 <ChronotypeTimeline/>
                 <div className ='buttonClass111'><SurveyButton > </SurveyButton></div>
                 <br></br>

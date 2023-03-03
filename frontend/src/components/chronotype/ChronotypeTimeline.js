@@ -25,10 +25,10 @@ const description = [
 const styles = {
   descriptionBox: {
     backgroundColor: 'white',
-    border: '1px solid black',
+    border: '3px solid black',
     padding: '10px',
     borderRadius: '10px',
-    width: '300px',
+    width: '100%',
   },
 };
 

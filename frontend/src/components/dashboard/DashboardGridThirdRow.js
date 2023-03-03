@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import DashboardCard from "./DashboardCard";
-
+import './Dashboard.css';
 
 export default function DashboardGridThirdRow () {
     return (
@@ -9,29 +8,31 @@ export default function DashboardGridThirdRow () {
                 gridColumn="span 4"
                 mt={18}
             >
-                <DashboardCard 
-                    card={ 
-                        {
-                            "id": "unscheduledTime", 
-                            "title": "Unscheduled Time", 
-                            "mainContent": "{unfilledPercent} of your calendar was unscheduled time this {timeframe}."
-                        }
-                    }
-                />
+                <div className='UnsTimCard'>
+                <h2 className='DashboardTitle'>Unscheduled Time</h2>
+                <div className='UnsTim'>
+                    <div className='UnsTim-wrapper'>
+                        <p className='UnsTim-text'>
+                            (unfilledPercent) of your calendar was unscheduled time this (timeframe)
+                        </p>
+                    </div>
+                </div>
+            </div>
             </Box>
             <Box
                 gridColumn="span 3"
                 mt={18}
             >
-                <DashboardCard 
-                    card={ 
-                        {
-                            "id": "meetingTime", 
-                            "title": "Meeting Time", 
-                            "mainContent": "You spent{timeInMeetings} this {timeframe}."
-                        }
-                    }
-                />
+                <div className='MeeTimCard'>
+                <h2 className='DashboardTitle'>Meeting Time</h2>
+                <div className='MeeTim'>
+                    <div className='MeeTim-wrapper'>
+                        <p className='MeeTim-text'>
+                            You spent (timeInMeetings) this (timeframe).
+                        </p>
+                    </div>
+                </div>
+            </div>
             </Box>
         </>
     )
