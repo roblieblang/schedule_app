@@ -7,6 +7,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
+    "@fullcalendar/google-calendar": "^6.1.4",
     "@fullcalendar/interaction": "^6.1.4",
     "@fullcalendar/react": "^6.1.4",
     "@fullcalendar/timegrid": "^6.1.4",
@@ -27,9 +28,7 @@
     "react-dom": "18.2.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.0",
-    "rsuite": "^5.27.0",
-    "survey-core": "^1.9.75",
-    "survey-react-ui": "^1.9.75"
+    "rsuite": "^5.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -55,12 +54,10 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "jest": "^27.5.1",
-    "jest-environment-jsdom": "^29.4.3",
     "json-server": "^0.17.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "survey-core": "^1.9.75",
+    "survey-react-ui": "^1.9.75"
   }
 }

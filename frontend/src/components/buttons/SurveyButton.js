@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Card from './components/survey/survey';
+//import Card from './components/survey/survey';
 
 export default function SurveyButton() {
 

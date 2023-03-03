@@ -8,7 +8,7 @@ import "./survey.css";
 
 export default function Card() {
 
-    var chronotype;
+    var chronotypeResult;
 
     const [Lion, setLion] = useState(0);
 
@@ -42,21 +42,21 @@ export default function Card() {
 
 
     if ( Bear > Dolphin && Bear > Wolf && Bear > Lion) {
-      chronotype = 'Bear';
+      chronotypeResult = 'Bear';
     }
 
      if (Wolf > Bear && Wolf > Dolphin && Wolf > Lion) {
-      chronotype = 'Wolf';
+      chronotypeResult= 'Wolf';
 
     }
 
     if (Dolphin > Bear && Dolphin > Wolf && Dolphin > Lion) {
-      chronotype = 'Dolphin';
+      chronotypeResult = 'Dolphin';
 
     }
 
     if (Lion > Bear && Lion > Wolf && Lion > Dolphin){
-      chronotype = 'Lion';
+      chronotypeResult = 'Lion';
     }
 
 
@@ -325,7 +325,7 @@ export default function Card() {
 
               <br></br>
              
-                <div className="buttonClass11">  <SubmitSurvey> Submit Quiz </SubmitSurvey> </div>
+                <div className="buttonClass11">  <SubmitSurvey chronotype= {chronotypeResult}> Submit Quiz </SubmitSurvey> </div>
 
                 <br></br>
 
