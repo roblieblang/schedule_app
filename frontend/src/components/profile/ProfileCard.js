@@ -1,21 +1,30 @@
-import React from "react";
-import Card from '@mui/material/Card';
-import { CardContent, Typography } from "@mui/material";
+import React from 'react';
+import './ProfileCard.css';
+import { useAuth0 } from '@auth0/auth0-react';
 
-export default function ProfileCard({ card }) {
+const ProfileCard = () => {
+    const { user } = useAuth0();
+
+    if (!user) {
+      return null;
+    }
+
     return (
-        <Card 
-            px={{
-                backgroundColor: "#white",
-                borderRadius: 5,
-            }}
-        >
-            <CardContent>
-                <Typography variant="h6">{(card.title).toUpperCase()}</Typography>
-                <Typography variant="body2" component="div">
-                    {card.mainContent}
-                </Typography>
-            </CardContent>
-        </Card>
+        <div>
+            <div className='card1'>
+                <div className='image1-wrap'>
+                    <img src={user.picture} alt=''/>
+                </div>
+                <p className='username'>{user.name}</p>
+                <div className='text1-wrapper'>
+                    <li>Age:</li>
+                    <li>Occupation: </li>
+                    <li>My Chronotype: </li>
+                </div>
+                <hr className='divider' />
+            </div>
+        </div>
     )
 }
+
+export default ProfileCard;

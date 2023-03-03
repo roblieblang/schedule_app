@@ -1,0 +1,33 @@
+.card1{
+    flex-direction: column;
+}
+
+.image1-wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.image1-wrap img{
+    width: 25vmin;
+    height: 25vmin;
+}
+
+.username{
+    font-size: 5vmin;
+    padding-bottom: 10%;
+    justify-content: center;
+}
+
+.text1-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding-bottom: 5%;
+    font-size: 3vmin;
+}
+
