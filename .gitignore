@@ -687,3 +687,4 @@ zsdoc/data
 
 # End of https://www.toptal.com/developers/gitignore/api/node,git,windows,macos,linux,powershell,zsh,visualstudiocode
 backend/credentials.json
+frontend/.env
