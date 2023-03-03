@@ -1,0 +1,41 @@
+
+    
+    /*Alternative CSS Centering Code with the "body" Selector*/
+
+    .h1Classes {
+        text-decoration: antiquewhite;
+        font-size: 30%;
+    }
+    
+    .bodyClass {
+    
+      text-align: center;
+      margin: auto;
+      font-family: 'Lexend Deca', sans-serif;  
+      
+      position: static;
+     
+    }
+
+
+    .buttonClass11 button {
+
+      height: 6vh;
+
+  
+      width: 9%;
+  
+      background-color: black;
+  
+  }
+  
+  .buttonClass11:hover button {
+  
+      background-color: rgb(75, 78, 78);
+  }
+
+
+
+  .normal {
+    line-break: normal;
+}
