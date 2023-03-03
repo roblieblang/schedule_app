@@ -12,7 +12,7 @@ export default function DashboardGridFirstRow () {
                 justifyContent="center"
             >
             <div className='BusCalCard'>
-                <h2 className='title'>Busiest Calendar</h2>
+                <h2 className='DashboardTitle'>Busiest Calendar</h2>
                 <div className='BusCal'>
                     <div className='BusCal-wrapper'>
                         <p className='BusCal-text'>
@@ -29,7 +29,7 @@ export default function DashboardGridFirstRow () {
                 justifyContent="center"
             >
             <div className='TotWorCard'>
-                <h2 className='title'>Total Work Time</h2>
+                <h2 className='DashboardTitle'>Total Work Time</h2>
                 <div className='TotWor'>
                     <div className='TotWor-wrapper'>
                         <p className='TotWor-text'>
@@ -74,7 +74,7 @@ export default function DashboardGridFirstRow () {
                 ml={-2}
             >
             <div className='MyChrCard'>
-                <h2 className='title'>My Chronotype</h2>
+                <h2 className='DashboardTitle'>My Chronotype</h2>
                 <div className='MyChr'>
                     <div className='MyChr-wrapper'>
                         <p className='MyChr-text'>

@@ -8,7 +8,7 @@ export default function DashboardGridSecondRow() {
                 gridColumn="span 6"
                 gridRow="span 1"
             >
-                <h2 className='title'>Satisfaction Score</h2>
+                <h2 className='DashboardTitle'>Satisfaction Score</h2>
                 
                 <Box 
                     height="250px" 

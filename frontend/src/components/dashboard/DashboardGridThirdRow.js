@@ -9,7 +9,7 @@ export default function DashboardGridThirdRow () {
                 mt={18}
             >
                 <div className='UnsTimCard'>
-                <h2 className='title'>Unscheduled Time</h2>
+                <h2 className='DashboardTitle'>Unscheduled Time</h2>
                 <div className='UnsTim'>
                     <div className='UnsTim-wrapper'>
                         <p className='UnsTim-text'>
@@ -24,7 +24,7 @@ export default function DashboardGridThirdRow () {
                 mt={18}
             >
                 <div className='MeeTimCard'>
-                <h2 className='title'>Meeting Time</h2>
+                <h2 className='DashboardTitle'>Meeting Time</h2>
                 <div className='MeeTim'>
                     <div className='MeeTim-wrapper'>
                         <p className='MeeTim-text'>
