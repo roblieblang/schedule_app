@@ -34,7 +34,7 @@ async function getGoogleAccessToken(user_id){
   };
   const user = await axios.get(userReqParams.url, { headers: userReqParams.headers });
   const googleIdPAccessToken = user.data.identities[0].access_token;
-  console.log("google IdP access token:", googleIdPAccessToken);
+  // console.log("hello", user.data.identities);
   return googleIdPAccessToken;
   // console.log(userReqParams)
   // console.log(user.data)
