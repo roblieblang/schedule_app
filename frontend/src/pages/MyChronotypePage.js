@@ -5,6 +5,7 @@ import ChronoSummary from '../components/chronotype/ChronoSummary';
 import SurveyButton from '../components/buttons/SurveyButton';
 import ChronotypeTimeline from '../components/chronotype/ChronotypeTimeline';
 import '../stylesheets/mychronotype/chronotype.css';
+import ChronotypeTimeline from './../components/chronotype/ChronotypeTimeline';
 
 const MyChronotypePage = () => {
 
