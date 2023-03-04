@@ -7,6 +7,9 @@ export default function LoginButton() {
 
   const handleLogin = async () => {
     await loginWithRedirect({
+      access_type: 'offline', 
+      connection_scope: 'https://www.googleapis.com/auth/calendar.events.readonly', 
+      approval_prompt: 'force',
       appState: {
         returnTo: `/dashboard`,
       },

@@ -16,6 +16,7 @@ const root = createRoot(container);
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const audience = process.env.REACT_APP_AUTH0_AUDIENCE;
 
 root.render(
   <React.StrictMode>
@@ -25,6 +26,7 @@ root.render(
         clientId={clientId}
         redirectUri={`${window.location.origin}/dashboard`}
         cacheLocation="localstorage"
+        audience={audience}
       >
         <StyledEngineProvider injectFirst>
           <App />

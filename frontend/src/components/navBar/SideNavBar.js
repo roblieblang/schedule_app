@@ -1,5 +1,5 @@
 import { Drawer, List, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
-import {CalendarMonth, Schedule, FactCheck, Dashboard} from '@mui/icons-material/';
+import {CalendarMonth, Schedule, FactCheck, Dashboard, SurfingOutlined} from '@mui/icons-material/';
 import Typography  from '@mui/material/Typography';
 
 export const drawerWidth = 240
@@ -10,6 +10,7 @@ const scheduleMenuItems =[
 ];
 const chronotypeMenuItems =[
     {text: "My Chronotype", icon: <Schedule />, path: "/mychronotype"},
+    {text: "Google Calendar API", icon: <SurfingOutlined />, path: "/google-api"},
     {text: "Interesting Facts", icon: <FactCheck />, path: "/interestingfacts"},
 ]
 
