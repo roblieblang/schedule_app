@@ -4,7 +4,6 @@ import { Box } from '@mui/system';
 import ChronoSummary from '../components/chronotype/ChronoSummary';
 import SurveyButton from '../components/buttons/SurveyButton';
 import '../stylesheets/mychronotype/chronotype.css';
-import ChronotypeTimeline from '../components/chronotype/ChronotypeTimeline';
 
 const MyChronotypePage = () => {
 
@@ -24,9 +23,6 @@ const MyChronotypePage = () => {
         
             
                 <ChronoSummary/>
-
-               
-                
                 <ChronotypeTimeline/>
                  
                

@@ -10,7 +10,7 @@ const scheduleMenuItems =[
 ];
 const chronotypeMenuItems =[
     {text: "My Chronotype", icon: <Schedule />, path: "/mychronotype"},
-    {text: "Interesting Facts", icon: <FactCheck />, path: ""},
+    {text: "Interesting Facts", icon: <FactCheck />, path: "/interestingfacts"},
 ]
 
 export  function SideNavBar() {

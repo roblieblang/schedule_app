@@ -4,7 +4,7 @@
   border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
-  width: 868px;
+  width: 100%;
   height: 250px;
   background-color: white;
 }
@@ -56,7 +56,7 @@
 .summary-title {
   margin: auto;
   margin-bottom: 5px;
-  font-size: 24px;
+  font-size: 200%;
   font-weight: bold;
   text-decoration: underline;
   text-align: center;
@@ -64,4 +64,5 @@
 
 .summary-text {
   text-align: justify;
+  font-size: 130%;
 }
