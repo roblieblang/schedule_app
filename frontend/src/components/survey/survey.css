@@ -26,6 +26,8 @@
       width: 9%;
   
       background-color: black;
+      -webkit-text-fill-color: aliceblue;
+      -webkit-text-stroke-width: 16%;
   
   }
   
