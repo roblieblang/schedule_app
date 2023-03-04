@@ -2,14 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { gapi } from "gapi-script";
 import axios from "axios";
 import LogoutButton from './../components/buttons/LogoutButton';
+import { useAuth0 } from '@auth0/auth0-react';
 
 
 export default function GoogleApiPage() {
-  // janky, (yet effective) way to ensure user access tojken stays current, without a refresh token
+
+  const { logout } = useAuth0();
+  // janky (yet effective) way to ensure user access token stays current, without a refresh token
   // if time I'll do this properly
   setTimeout(function(){
-    window.location.reload();
-  }, 3600000);
+    logout({
+      logoutParams: {
+        returnTo: window.location.origin,
+      },
+    });
+  }, 3200000);
 
   // const ACCESS_TOKEN = process.env.REACT_APP_GOOGLE_ACCESS_TOKEN;
   const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';

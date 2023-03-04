@@ -14,7 +14,6 @@ export default function DashboardPage() {
     return (
       <>
         <NavBar />
-
         <Box 
           marginLeft={32}
           marginTop={2}
