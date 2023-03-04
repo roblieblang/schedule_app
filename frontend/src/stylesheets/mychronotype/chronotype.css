@@ -1,9 +1,23 @@
 .buttonClass111 button {
 
-    height: 6vh;
-    width: 9%;
 
-    background-color: rgb(191, 191, 191);
+    position: relative;
+
+    height: 10vh;
+
+    width: 15%;
+
+    -webkit-text-fill-color: white;
+
+    font-weight: 300;
+
+    font-size: medium;
+
+    background-color:#56B195;
+
+  
+
+    
 
 }
 
