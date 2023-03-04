@@ -93,7 +93,7 @@ export default function DashboardGridFirstRow () {
                 <div className='MyChr'>
                     <div className='MyChr-wrapper'>
                         <p className='MyChr-text'>
-                        According to the Chronotype Survey you last took on (dd/mm/yyyy) you are a {chronotype} chronotype.
+                        According to the Chronotype Survey you last took on (dd/mm/yyyy) you are a <strong>{chronotype}</strong> chronotype.
                         </p>
                     </div>
                 </div>

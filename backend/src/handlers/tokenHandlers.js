@@ -1,5 +1,4 @@
 require('dotenv').config()
-// const fs = require('fs').promises;
 const axios = require( 'axios');
 const express = require ('express');
 const path = require ('path');
@@ -7,12 +6,6 @@ const { authenticate } = require ('@google-cloud/local-auth');
 const { google } = require ("googleapis");
 
 
-// wrap in a get request route
-/* 
-  app.get("/token/${uid}", getGoogleAccessToken) {
-    res.send(getGoogleAccessToken(uid));
-  }
-*/
 
 async function getGoogleAccessToken(user_id){
     // Auth0 management API token request
@@ -34,11 +27,8 @@ async function getGoogleAccessToken(user_id){
   };
   const user = await axios.get(userReqParams.url, { headers: userReqParams.headers });
   const googleIdPAccessToken = user.data.identities[0].access_token;
-  // console.log("hello", user.data.identities);
   return googleIdPAccessToken;
-  // console.log(userReqParams)
   // console.log(user.data)
 };
 
-// getGoogleAccessToken(process.env.TEST_USER_ID);
 module.exports = getGoogleAccessToken;

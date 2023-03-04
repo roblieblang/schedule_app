@@ -1,10 +1,9 @@
 const express = require('express');
-const getGoogleAccessToken = require("../handlers/auth0TokenHandler.js");
+const getGoogleAccessToken = require("../handlers/tokenHandlers.js");
 const router = express.Router();
 
 
 // http://localhost:3301/gapi-token/:userId
-// YOu can change the UID by replacing '1234acbd'
 
 router.get('/gapi-token/:userId', (req, res) => {
   const userId = req.params.userId;
