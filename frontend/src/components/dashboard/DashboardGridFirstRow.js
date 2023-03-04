@@ -1,8 +1,8 @@
 import { Box, Divider } from "@mui/material";
-import DashboardCard from "./DashboardCard";
 import SelectField from "../inputs/SelectField";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import './Dashboard.css';
 
 export default function DashboardGridFirstRow () {
     
@@ -26,15 +26,16 @@ export default function DashboardGridFirstRow () {
                 alignItems="center" 
                 justifyContent="center"
             >
-                <DashboardCard 
-                    card={ 
-                        {
-                        "id": "busiestCalendar", 
-                        "title": "Busiest Calendar", 
-                        "mainContent": "Your busiest calendar was {user calendar with most events}."
-                        }
-                    }
-                />
+            <div className='BusCalCard'>
+                <h2 className='DashboardTitle'>Busiest Calendar</h2>
+                <div className='BusCal'>
+                    <div className='BusCal-wrapper'>
+                        <p className='BusCal-text'>
+                            Your busiest calendar was (user calendar with most events).
+                        </p>
+                    </div>
+                </div>
+            </div>
             </Box>
             <Box 
                 gridColumn="span 3" 
@@ -42,15 +43,16 @@ export default function DashboardGridFirstRow () {
                 alignItems="center" 
                 justifyContent="center"
             >
-                <DashboardCard 
-                    card={ 
-                        {
-                        "id": "totalWorkTime", 
-                        "title": "Total Work Time", 
-                        "mainContent": "You spent {workTime} {units} working {timeframe}."
-                        }
-                    }
-                />
+            <div className='TotWorCard'>
+                <h2 className='DashboardTitle'>Total Work Time</h2>
+                <div className='TotWor'>
+                    <div className='TotWor-wrapper'>
+                        <p className='TotWor-text'>
+                            You spent (workTime) (units) working (timeframe)
+                        </p>
+                    </div>
+                </div>
+            </div>
             </Box>
             <Box 
                 gridColumn="span 1" 
@@ -75,7 +77,8 @@ export default function DashboardGridFirstRow () {
                 flexItem 
                 sx={{ 
                     borderRightWidth: 7, 
-                    mr: 1 }}
+                    mr: 1,
+                    color: 'black' }}
                 />
             </Box>
             <Box 
@@ -85,15 +88,16 @@ export default function DashboardGridFirstRow () {
                 justifyContent="center"
                 ml={-2}
             >
-                <DashboardCard 
-                card={ 
-                    {
-                    "id": "myChronotype", 
-                    "title": "My Chronotype", 
-                    "mainContent": `According to the Chronotype Survey you last took on {dd/mm/yyyy} you are a ${chronotype} chronotype.`
-                    }
-                }
-                />
+            <div className='MyChrCard'>
+                <h2 className='DashboardTitle'>My Chronotype</h2>
+                <div className='MyChr'>
+                    <div className='MyChr-wrapper'>
+                        <p className='MyChr-text'>
+                        According to the Chronotype Survey you last took on (dd/mm/yyyy) you are a {chronotype} chronotype.
+                        </p>
+                    </div>
+                </div>
+            </div>
             </Box>
         </>
     );

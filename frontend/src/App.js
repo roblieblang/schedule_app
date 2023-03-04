@@ -7,6 +7,8 @@ import CalendarPage from "./pages/CalendarPage.js"
 import Dashboard from './pages/DashboardPage';
 import MyChronotypePage from './pages/MyChronotypePage.js';
 import GoogleApiPage from "./apis/GoogleApiPage.js";
+import Card from './components/survey/survey';
+import InterestingFactsPage from './pages/InterestingFactsPage';
 import './App.css';
 
 export default function App() {
@@ -27,6 +29,8 @@ export default function App() {
         <Route path="/calendar" exact element={<CalendarPage/>} />
         <Route path="/mychronotype" exact element={<MyChronotypePage/>} />
         <Route path="/google-api" exact element={<GoogleApiPage />} />
+        <Route path="mychronotype/quiz" exact element={<Card/>} />
+        <Route path="/interestingfacts" exact element={<InterestingFactsPage/>} />
       </Routes>
       </div>
     );
