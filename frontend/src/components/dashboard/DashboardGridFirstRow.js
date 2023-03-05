@@ -11,7 +11,8 @@ export default function DashboardGridFirstRow () {
     useEffect(() => {
         const fetchData = async () => {
           const result = await axios(
-            'http://localhost:3301/usersInformation/users/chronotype/results?uid=1234abcd',
+            // 'http://localhost:3301/usersInformation/users/chronotype/results?uid=1234abcd',
+            `https://group3backend-lukfolvarsky.onrender.com/usersInformation/users/chronotype/results?uid=1234abcd`,
           );
           setChronotype(result.data[0].chrono_name);
         };
