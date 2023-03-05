@@ -8,7 +8,7 @@ CSC 394: Group 3's Capstone Project
 
 #### Backend
 
-1. Install nvm on your machine
+[Found here](https://github.com/lukfolvarsky/group3Backend)
 
 #### Frontend
 
