@@ -8,16 +8,27 @@ export default function DashboardGridFirstRow () {
     
     const [chronotype, setChronotype] = useState("");
 
-    useEffect(() => {
-        const fetchData = async () => {
-          const result = await axios(
-            // 'http://localhost:3301/usersInformation/users/chronotype/results?uid=1234abcd',
-            `https://group3backend-lukfolvarsky.onrender.com/usersInformation/users/chronotype/results?uid=1234abcd`,
-          );
-          setChronotype(result.data[0].chrono_name);
+    const url = `http://localhost:3301`;
+    const auth0UserData = JSON.parse(window.localStorage.getItem('@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email')).body.decodedToken.user;
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       const result = await axios(
+    //         // 'http://localhost:3301/usersInformation/users/chronotype/results?uid=1234abcd',
+    //         // `https://group3backend-lukfolvarsky.onrender.com/usersInformation/users/chronotype/results?uid=1234abcd`,
+    //       );
+    //       setChronotype(result.data[0].chrono_name);
+    //     };
+    //     fetchData();
+    //   }, []);
+
+    useEffect(()=>{
+        const getChronoTypeData = async () => {
+            const response = await axios.get(`${url}/usersInformation/users/chronotype/results?uid=${auth0UserData.sub}`);
+            setChronotype(response.data[0].chrono_name);
         };
-        fetchData();
-      }, []);
+        getChronoTypeData();
+    });
 
     return (
         <>
@@ -94,7 +105,12 @@ export default function DashboardGridFirstRow () {
                 <div className='MyChr'>
                     <div className='MyChr-wrapper'>
                         <p className='MyChr-text'>
-                        According to the Chronotype Survey you last took on (dd/mm/yyyy) you are a <strong>{chronotype}</strong> chronotype.
+                        {chronotype === "Empty" ? 
+                            <p style={{color: "red", fontSize: 20}}>Take the Quiz!</p> : 
+                            <p>
+                                According to the Chronotype Quiz you last took on (dd/mm/yyyy) you are a <strong>{chronotype}</strong> chronotype.
+                            </p>
+                        }
                         </p>
                     </div>
                 </div>
