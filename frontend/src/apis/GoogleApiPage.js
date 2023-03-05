@@ -31,7 +31,8 @@ export default function GoogleApiPage() {
 
   const getGAPIToken = async () => {
     const result = await axios(
-      `http://localhost:3301/googleAccessToken/gapi-token/${auth0UserId}`,
+      // `http://localhost:3301/googleAccessToken/gapi-token/${auth0UserId}`,
+      `https://group3backend-lukfolvarsky.onrender.com/googleAccessToken/gapi-token/${auth0UserId}`,
     );
     console.log(result.data);
     return(result.data);
