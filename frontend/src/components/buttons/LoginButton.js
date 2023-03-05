@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import Button from '@mui/material/Button';
+import axios from "axios";
 
 export default function LoginButton() {
   const { loginWithRedirect } = useAuth0();
@@ -9,7 +10,7 @@ export default function LoginButton() {
     await loginWithRedirect({
       access_type: 'offline', 
       connection_scope: 'https://www.googleapis.com/auth/calendar.events.readonly', 
-      approval_prompt: 'force',
+      // approval_prompt: 'force',
       appState: {
         returnTo: `/dashboard`,
       },
