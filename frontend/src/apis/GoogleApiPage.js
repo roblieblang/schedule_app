@@ -2,27 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { gapi } from "gapi-script";
 import axios from "axios";
 import LogoutButton from './../components/buttons/LogoutButton';
-import { useAuth0 } from '@auth0/auth0-react';
+// import { useAuth0 } from '@auth0/auth0-react';
 
 
 export default function GoogleApiPage() {
 
-  const { logout } = useAuth0();
+  // const { logout } = useAuth0();
   // janky (yet effective) way to ensure user access token stays current, without a refresh token
   // if time I'll do this properly
-  setTimeout(function(){
-    logout({
-      logoutParams: {
-        returnTo: window.location.origin,
-      },
-    });
-  }, 3200000);
+  // setTimeout(function(){
+  //   logout({
+  //     logoutParams: {
+  //       returnTo: window.location.origin,
+  //     },
+  //   });
+  // }, 3200000);
 
-  // const ACCESS_TOKEN = process.env.REACT_APP_GOOGLE_ACCESS_TOKEN;
   const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
-  // const CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID
   const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
-  // const SCOPES = "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar.events https://www.googleapis.com/auth/calendar";
     
   const [events, setEvents] = useState([]);
 
@@ -38,7 +35,7 @@ export default function GoogleApiPage() {
     return(result.data);
   };
 
-const getEvents = async () => {
+const getPrimaryCalendarEvents = async () => {
   const token = await getGAPIToken();
   function initGapi (){
     gapi.client.init({
@@ -68,7 +65,7 @@ const getEvents = async () => {
 
 
   useEffect(() => {
-    const events = getEvents();
+    const events = getPrimaryCalendarEvents();
     setEvents(events);
   }, []);
 
