@@ -1,20 +1,64 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './MyChronotype.css';
+import axios from "axios";
 
-const ChronoSummary = () => {
+export default function ChronoSummary () {
+  const [userChronotype, setUserChronotype] = useState("");
+
+  const url = `http:///localhost:3301`; 
+  const auth0UserData = JSON.parse(window.localStorage.getItem('@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email')).body.decodedToken.user;
+
+  const getChronoType = async () => {
+    const response = await axios.get(`${url}/usersInformation/users/chronotype/results?uid=${auth0UserData.sub}`);
+    // console.log(response[0])
+    setUserChronotype(response.data[0]);
+  }
+
+  useEffect(() => {
+    const userChronotype = getChronoType();
+    setUserChronotype(userChronotype);
+  }, []);
+
+  function setChronotypeImage(chronotype) {
+    // Change to the actual image paths. Should probably be stored in our images folder. 
+    let imagePath = "";
+    switch(chronotype) {
+      case "Wolf":
+        imagePath = "Wolf";
+        break;
+      case "Dolphin":
+        imagePath = "Dolphin";
+        break;
+      case "Lion":
+        imagePath = "Lion";
+        break;
+      case "Bear":
+        imagePath = "https://cdn-icons-png.flaticon.com/512/523/523444.png";
+        break;
+      default:
+        imagePath = "placeholder";
+    }
+    return imagePath;
+  };
+
   return (
     <div>
       <h2 className="title">My Chronotype</h2>
       <div className="summary">
         <div className="image-wrapper">
-          <h3 className="image-title">The Bear</h3>
-          <img src="https://cdn-icons-png.flaticon.com/512/523/523444.png" alt="The Bear" />
+          <h3 className="image-title">
+            {userChronotype.chrono_name === "Empty"  ?  
+              <h3>Take the Quiz!</h3> : 
+              <h3>{userChronotype.chrono_name}</h3>
+            }
+          </h3>
+          <img src={setChronotypeImage(userChronotype.chrono_name)} alt={userChronotype.chrono_name} />
         </div>
         <hr className="divider" />
         <div className="summary-wrapper">
-          <h4 className="summary-title">Summary</h4>
+          <h4 className="summary-title">Summary </h4>
           <p className="summary-text">
-          The Bear Chronotype refers to individuals who tend to be naturally active during the night and have a preference for sleeping during the day. People with the Bear Chronotype often have trouble waking up early in the morning and may feel more awake and alert in the evening and at night. They may also find it difficult to adjust to a 9-5 work schedule and may prefer to work a more flexible schedule that accommodates their sleep pattern. Some common traits of the Bear Chronotype include being social and energetic at night, being a night owl, and having a hard time waking up early in the morning. It's important to note that everyone's sleep pattern is unique and that the Bear Chronotype is just one of several chronotypes that describe different patterns of sleep and wakefulness.
+          {userChronotype.summary}
           </p>
         </div>
       </div>
@@ -22,4 +66,4 @@ const ChronoSummary = () => {
   );
 };
 
-export default ChronoSummary;
+// export default ChronoSummary;
