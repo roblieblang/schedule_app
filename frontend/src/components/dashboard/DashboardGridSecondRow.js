@@ -5,7 +5,7 @@ export default function DashboardGridSecondRow() {
     return (
         <>
             <Box
-                gridColumn="span 6"
+                gridColumn="span 7"
                 gridRow="span 1"
             >
                 <h2 className='DashboardTitle'>Satisfaction Score</h2>
