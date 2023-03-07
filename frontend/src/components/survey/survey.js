@@ -16,7 +16,7 @@ export default function Card() {
     "Lion": 4
   };
 
-  const url = `http:///localhost:3301`; 
+  const url = `https://group3backend-lukfolvarsky.onrender.com`; 
   // const url = `https://group3backend-lukfolvarsky.onrender.com/usersInformation/users/exists?uid=`;
   const auth0UserData = JSON.parse(window.localStorage.getItem('@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email')).body.decodedToken.user;
 

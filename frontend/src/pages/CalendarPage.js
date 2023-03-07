@@ -7,7 +7,6 @@ import interactionPlugin from '@fullcalendar/interaction'
 import googleCalendarPlugin from '@fullcalendar/google-calendar'
 
 export default class DemoApp extends React.Component {
-
     render() {
       return (
         <>
