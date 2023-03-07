@@ -25,7 +25,7 @@ const MyChronotypePage = () => {
         setUserChronotype(userChronotype);
     }, []);
     console.log(userChronotype.chrono_name)
-    if (userChronotype.chrono_name === undefined) {
+    if (userChronotype.chrono_name === 'Empty') {
         return (
             <>
                 <NavBar />
