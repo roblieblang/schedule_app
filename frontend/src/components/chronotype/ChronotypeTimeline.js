@@ -40,13 +40,13 @@ export default function ChronotypeTimeline() {
   const [timelineValues, setTimelineValues] = useState([]);
   const[timelineDescriptions, setTimelineDescriptions] = useState([]);
 
-  const url = `http://localhost:3301`;
+  const url = `https://group3backend-lukfolvarsky.onrender.com`;
   const auth0UserData = JSON.parse(window.localStorage.getItem('@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email')).body.decodedToken.user;
 
   const getTimelineValues = async () => {
     let valuesArr = [];
     let descArr = [];
-    let response = await axios.get(`${url}/usersInformation/users/chronotype/timeline?uid=${auth0UserData}`);
+    let response = await axios.get(`${url}/usersInformation/users/chronotype/timeline?uid=${auth0UserData.sub}`);
     for (let i = 0; i < response.data.length; i++) {
       valuesArr[i] = (response.data[i]["timestring"]);
       descArr[i] = (response.data[i]["timelinetext"]);
