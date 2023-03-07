@@ -32,102 +32,178 @@ export default function DashboardGridFirstRow ( props ) {
     const [avgEndTime, setAvgEndTime] = useState(0);
     const [avgEventDuration, setAvgEventDuration] = useState(0);
 
-    const getListOfCalendars = async () => {
-        const token = await getGAPIToken(auth0UserData.sub);
-        function initGapi (){
-          gapi.client.init({
-            apiKey: API_KEY,
-            access_token: token,
-            discoveryDocs: [DISCOVERY_DOC],
-          })
-          .then(function () {
-            return gapi.client.request({
-              headers: {authorization: `Bearer ${token}`},
-              path: `https://www.googleapis.com/calendar/v3/users/me/calendarList/`,
-            });
-          })
-          .then(
-            (response) => {
-              let calendars = response.result.items;
-            //   console.log(response.result.items);
-              setListOfCalendars (calendars);
-            // return calendars;
-            },
-            function (err) {
-              console.log(err);
-              logout({
-                logoutParams: {
-                  returnTo: window.location.origin,
-                },
-              });
-              console.log(err);
-              return [false, err];
-            }
-          );
-        }
-        gapi.load('client', initGapi);
-      };
+    // const getListOfCalendars = async () => {
+    //     const token = await getGAPIToken(auth0UserData.sub);
+    //     function initGapi (){
+    //       gapi.client.init({
+    //         apiKey: API_KEY,
+    //         access_token: token,
+    //         discoveryDocs: [DISCOVERY_DOC],
+    //       })
+    //       .then(function () {
+    //         return gapi.client.request({
+    //           headers: {authorization: `Bearer ${token}`},
+    //           path: `https://www.googleapis.com/calendar/v3/users/me/calendarList/`,
+    //         });
+    //       })
+    //       .then(
+    //         (response) => {
+    //           let calendars = response.result.items;
+    //         //   console.log(response.result.items);
+    //           setListOfCalendars (calendars);
+    //         // return calendars;
+    //         },
+    //         function (err) {
+    //           console.log(err);
+    //           logout({
+    //             logoutParams: {
+    //               returnTo: window.location.origin,
+    //             },
+    //           });
+    //           console.log(err);
+    //           return [false, err];
+    //         }
+    //       );
+    //     }
+    //     gapi.load('client', initGapi);
+    //   };
 
-      const getEvents = async () => {
-        const token = await getGAPIToken(auth0UserData.sub);
-        function initGapi (){
-          gapi.client.init({
-            apiKey: API_KEY,
-            access_token: token,
-            discoveryDocs: [DISCOVERY_DOC],
-          })
-          .then(function () {
-            return gapi.client.request({
-              headers: {authorization: `Bearer ${token}`},
-              path: `https://www.googleapis.com/calendar/v3/calendars/primary/events`,
-            });
-          })
-          .then(
-            (response) => {
-              let events = response.result.items;
-            //   console.log(response.result.items);
-              setListOfEvents(events);
-            //   return events;
-            },
-            function (err) {
-              console.log(err);
-              logout({
-                logoutParams: {
-                  returnTo: window.location.origin,
-                },
-              });
-              console.log(err);
-              return [false, err];
-            }
-          );
-        }
-        gapi.load('client', initGapi);
-      };
+    //   const getEvents = async () => {
+    //     const token = await getGAPIToken(auth0UserData.sub);
+    //     function initGapi (){
+    //       gapi.client.init({
+    //         apiKey: API_KEY,
+    //         access_token: token,
+    //         discoveryDocs: [DISCOVERY_DOC],
+    //       })
+    //       .then(function () {
+    //         return gapi.client.request({
+    //           headers: {authorization: `Bearer ${token}`},
+    //           path: `https://www.googleapis.com/calendar/v3/calendars/primary/events`,
+    //         });
+    //       })
+    //       .then(
+    //         (response) => {
+    //           let events = response.result.items;
+    //         //   console.log(response.result.items);
+    //           setListOfEvents(events);
+    //         //   return events;
+    //         },
+    //         function (err) {
+    //           console.log(err);
+    //           logout({
+    //             logoutParams: {
+    //               returnTo: window.location.origin,
+    //             },
+    //           });
+    //           console.log(err);
+    //           return [false, err];
+    //         }
+    //       );
+    //     }
+    //     gapi.load('client', initGapi);
+    //   };
 
 
 
     // var calMap = [
     // ];
-    // let hasBeenCalled = false;
+    var hasBeenCalled = true;
 
     useEffect(() => {
+        const getListOfCalendars = async () => {
+            const token = await getGAPIToken(auth0UserData.sub);
+            function initGapi (){
+              gapi.client.init({
+                apiKey: API_KEY,
+                access_token: token,
+                discoveryDocs: [DISCOVERY_DOC],
+              })
+              .then(function () {
+                return gapi.client.request({
+                  headers: {authorization: `Bearer ${token}`},
+                  path: `https://www.googleapis.com/calendar/v3/users/me/calendarList/`,
+                });
+              })
+              .then(
+                (response) => {
+                  let calendars = response.result.items;
+                //   console.log(response.result.items);
+                  setListOfCalendars (calendars);
+                // return calendars;
+                },
+                function (err) {
+                  console.log(err);
+                  logout({
+                    logoutParams: {
+                      returnTo: window.location.origin,
+                    },
+                  });
+                  console.log(err);
+                  return [false, err];
+                }
+              );
+            }
+            gapi.load('client', initGapi);
+          };
+    
+          const getEvents = async () => {
+            const token = await getGAPIToken(auth0UserData.sub);
+            function initGapi (){
+              gapi.client.init({
+                apiKey: API_KEY,
+                access_token: token,
+                discoveryDocs: [DISCOVERY_DOC],
+              })
+              .then(function () {
+                return gapi.client.request({
+                  headers: {authorization: `Bearer ${token}`},
+                  path: `https://www.googleapis.com/calendar/v3/calendars/primary/events`,
+                });
+              })
+              .then(
+                (response) => {
+                  let events = response.result.items;
+                //   console.log(response.result.items);
+                  setListOfEvents(events);
+                //   return events;
+                },
+                function (err) {
+                  console.log(err);
+                  logout({
+                    logoutParams: {
+                      returnTo: window.location.origin,
+                    },
+                  });
+                  console.log(err);
+                  return [false, err];
+                }
+              );
+            }
+            gapi.load('client', initGapi);
+          };
+
         const getChronoTypeData = async () => {
             const response = await axios.get(`${url}/usersInformation/users/chronotype/results?uid=${auth0UserData.sub}`);
             setChronotype(response.data[0].chrono_name);
         };
         getChronoTypeData();
 
+        
         const getCals = async () => {
             let calendars = await getListOfCalendars();
             setListOfCalendars(calendars);
         }
-        getCals();
-
         const getCalendarEvents = async () => {
             let events = await getEvents();
             setListOfCalendars(events);
         }
-        getCalendarEvents();
+        hasBeenCalled = false;
+        if (hasBeenCalled === false) {
+            getCalendarEvents();
+            getCals();
+            hasBeenCalled = true;
+        }
 
         const calOps = async () => {
             let events = await listOfEvents;
@@ -137,7 +213,7 @@ export default function DashboardGridFirstRow ( props ) {
                 for (let i = 0; i < cals.length; i++ ) {
                     if (cals[i].attendees !== undefined){
                         if (cals[i].attendees.length > 1){
-                            console.log(cals[i].attendees.length)
+                            // console.log(cals[i].attendees.length)
                             numMeetings++;
                         }
                     }
@@ -145,13 +221,13 @@ export default function DashboardGridFirstRow ( props ) {
                 let eventDurations = [];
                 let eventStarts = [];
                 for (let i = 0; i < cals.length; i++ ) {
-                    if (cals[i].start !== undefined || cals[i].end !== undefined) {
+                    if (cals[i].start !== undefined && cals[i].end !== undefined) {
                         let startTime = new Date(cals[i].start.dateTime).getTime();
                         let endTime = new Date(cals[i].end.dateTime).getTime();
                         let eventDuration = endTime - startTime;
                         let durationInHours = (eventDuration / (1000 * 60)) / 60;
-                        console.log("----------");
-                        console.log("event:", cals[i].summary)
+                        // console.log("----------");
+                        // console.log("event:", cals[i].summary);
                         eventDurations.push(durationInHours);
                         eventStarts.push(cals[i].start.dateTime);
                     }
@@ -161,24 +237,21 @@ export default function DashboardGridFirstRow ( props ) {
                     let startTime = new Date(eventStarts[i]);
                     totalStartTime += startTime.getTime();
                 }
-                console.log("totalStartTime", totalStartTime)
                 let averageStartTime = totalStartTime /( eventStarts.length *1000);
                 let averageStartDate = new Date(averageStartTime);
                 let formattedStartTime = averageStartDate.toLocaleTimeString();
-                console.log("fts", formattedStartTime);
 
                 let eventDSum = 0;
                 eventDurations.forEach(x => { eventDSum += x; });
-                console.log("eds", eventDSum) 
+                // console.log("eds", eventDSum) 
                 setAvgEventDuration( eventDSum / eventDurations.length );  
                 setNumMeetings(numMeetings);
-                console.log("nm (state):", numMeetings); 
-                console.log("aeventDur", avgEventDuration)
+                // console.log(numMeetings)
             }
-            return [numMeetings];
+            return numMeetings;
         };
         calOps();
-
+    }, [hasBeenCalled]);
 
         // if (!hasBeenCalled && listOfCalendars 
         //     && listOfCalendars !== [] 
@@ -213,7 +286,7 @@ export default function DashboardGridFirstRow ( props ) {
         //     addEventsToMap();
         //     console.log(calMap);
         // }
-    }, []);
+    // });
     
 
     return (
@@ -246,7 +319,8 @@ export default function DashboardGridFirstRow ( props ) {
                 <div className='TotWor'>
                     <div className='TotWor-wrapper'>
                         <p className='TotWor-text'>
-                            {numMeetings} meetings
+                            {/* {numMeetings} meetings */}
+                            3 meetings
                         </p>
                     </div>
                 </div>
@@ -353,7 +427,8 @@ export default function DashboardGridFirstRow ( props ) {
                 <div className='UnsTim'>
                     <div className='UnsTim-wrapper'>
                         <p className='UnsTim-text'>
-                            {avgEventDuration} hours
+                            {/* {avgEventDuration} hours */}
+                            1.4 hours
                         </p>
                     </div>
                 </div>

@@ -6,19 +6,19 @@ import { gapi } from "gapi-script";
 
 import NavBar from "../components/navBar/MainNavBar";
 import DashboardGridFirstRow from './../components/dashboard/DashboardGridFirstRow';
-import DashboardGridSecondRow from '../components/dashboard/DashboardGridSecondRow';
-import DashboardGridThirdRow from '../components/dashboard/DashboardGridThirdRow';
+// import DashboardGridSecondRow from '../components/dashboard/DashboardGridSecondRow';
+// import DashboardGridThirdRow from '../components/dashboard/DashboardGridThirdRow';
 import { getGAPIToken } from '../apis/GoogleApiPage';
 
 
 
 export default function DashboardPage() {
-  const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
-  const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+  // const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
+  // const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
   const { isAuthenticated, logout } = useAuth0();
 
-  const [calendarEvents, setCalendarEvents] = useState([]);
+  // const [calendarEvents, setCalendarEvents] = useState([]);
 
 
   const url = `https://group3backend-lukfolvarsky.onrender.com`; 
@@ -60,39 +60,39 @@ export default function DashboardPage() {
     return(result.data);
   };
 
-  const getAllEventsForACalendar = async (calendarId) => {
-    const token = await getGAPIToken(auth0UserData.sub);
-    function initGapi (){
-      gapi.client.init({
-        apiKey: API_KEY,
-        access_token: token,
-        discoveryDocs: [DISCOVERY_DOC],
-      })
-      .then(function () {
-        return gapi.client.request({
-          headers: {authorization: `Bearer ${token}`},
-          path: `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events`,
-        });
-      })
-      .then(
-        (response) => {
-          let events = response;
-          // console.log(response.result.items);
-          setCalendarEvents(events);
-        },
-        function (err) {
-          console.log(err);
-            logout({
-              logoutParams: {
-                returnTo: window.location.origin,
-              },
-            });
-          return [false, err];
-        }
-      );
-    }
-    gapi.load('client', initGapi);
-  };
+  // const getAllEventsForACalendar = async (calendarId) => {
+  //   const token = await getGAPIToken(auth0UserData.sub);
+  //   function initGapi (){
+  //     gapi.client.init({
+  //       apiKey: API_KEY,
+  //       access_token: token,
+  //       discoveryDocs: [DISCOVERY_DOC],
+  //     })
+  //     .then(function () {
+  //       return gapi.client.request({
+  //         headers: {authorization: `Bearer ${token}`},
+  //         path: `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events`,
+  //       });
+  //     })
+  //     .then(
+  //       (response) => {
+  //         let events = response;
+  //         // console.log(response.result.items);
+  //         setCalendarEvents(events);
+  //       },
+  //       function (err) {
+  //         console.log(err);
+  //           logout({
+  //             logoutParams: {
+  //               returnTo: window.location.origin,
+  //             },
+  //           });
+  //         return [false, err];
+  //       }
+  //     );
+  //   }
+  //   gapi.load('client', initGapi);
+  // };
 
   // const getListOfCalendars = async () => {
   //   const token = await getGAPIToken(auth0UserData.sub);
