@@ -46,7 +46,7 @@ export default function ChronotypeTimeline() {
   const getTimelineValues = async () => {
     let valuesArr = [];
     let descArr = [];
-    let response = await axios.get(`${url}/usersInformation/users/chronotype/timeline?uid=${auth0UserData}`);
+    let response = await axios.get(`${url}/usersInformation/users/chronotype/timeline?uid=${auth0UserData.sub}`);
     for (let i = 0; i < response.data.length; i++) {
       valuesArr[i] = (response.data[i]["timestring"]);
       descArr[i] = (response.data[i]["timelinetext"]);
