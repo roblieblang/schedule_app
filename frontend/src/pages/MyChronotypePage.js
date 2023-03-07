@@ -44,6 +44,7 @@ const MyChronotypePage = () => {
                 <div className ='buttonClass111'> <SurveyButton type='button'> </SurveyButton></div> 
                 <br></br>
                     <ChronoSummary/>
+                    <p className='timeline-title'>Ideal Daily Timeline</p>
                     <ChronotypeTimeline/>
                 </Box>
             </>
