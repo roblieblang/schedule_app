@@ -25,3 +25,11 @@
         
     background-color: rgb(117, 122, 122);
 }
+
+.timeline-title{
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
