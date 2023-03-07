@@ -24,13 +24,13 @@ export default function ChronoSummary () {
     let imagePath = "";
     switch(chronotype) {
       case "Wolf":
-        imagePath = "Wolf";
+        imagePath = "https://cdn.pixabay.com/photo/2012/04/13/01/33/face-31708_960_720.png";
         break;
       case "Dolphin":
-        imagePath = "Dolphin";
+        imagePath = "https://cdn.pixabay.com/photo/2017/01/31/19/15/dolphin-2026574_960_720.png";
         break;
       case "Lion":
-        imagePath = "Lion";
+        imagePath = "https://cdn.pixabay.com/photo/2023/01/25/21/10/lion-7744604_960_720.png";
         break;
       case "Bear":
         imagePath = "https://cdn-icons-png.flaticon.com/512/523/523444.png";
