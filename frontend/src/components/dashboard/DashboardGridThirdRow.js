@@ -1,7 +1,11 @@
-import { Box } from "@mui/material";
+import React from "react";
+import { Box, Rating } from "@mui/material";
 import './Dashboard.css';
+import SubmitQuiz from "../buttons/SatisfactionSubmitButton";
 
 export default function DashboardGridThirdRow () {
+    const [value, setValue] = React.useState(2);
+
     return (
         <>
             <Box
@@ -31,6 +35,28 @@ export default function DashboardGridThirdRow () {
                             You spent (timeInMeetings) this (timeframe).
                         </p>
                     </div>
+                </div>
+            </div>
+            </Box>
+            <Box 
+                gridColumn="9/12" 
+                ml={0}
+                mt={0}
+                display="flex" 
+                alignItems="flex-start" 
+                justifyContent="center"
+            >          
+                <div className='SatQuizCard'>
+                <h2 className='DashboardTitle'>Satisfaction Quiz</h2>
+                <div className='SatQuiz'>
+                <Rating
+                    name="simple-controlled"
+                    value={value}
+                    onChange={(event, newValue) => {
+                    setValue(newValue);
+                    }}
+                />
+                <div className="buttonClass22">  <SubmitQuiz QuizValue= {value}> Submit Quiz </SubmitQuiz> </div>
                 </div>
             </div>
             </Box>
