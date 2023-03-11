@@ -1,10 +1,68 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 import { Box, Rating } from "@mui/material";
 import './Dashboard.css';
 import SubmitQuiz from "../buttons/SatisfactionSubmitButton";
+import { useAuth0 } from '@auth0/auth0-react';
 
-export default function DashboardGridThirdRow () {
+export default function DashboardGridThirdRow ({ chronotype }) {
+    const {logout} = useAuth0();
+
     const [value, setValue] = React.useState(2);
+    const [averageStartTime, setAverageStartTime] = useState(null);
+
+    const auth0UserData = JSON.parse(
+        window.localStorage.getItem(
+            '@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email'))
+                .body.decodedToken.user;
+
+    const setProductiveHours = () => {
+        let hours = "";
+        switch(chronotype) {
+            case "Bear":
+                hours = "during the late night";
+                break;
+            case "Dolphin":
+                hours = "is quite irregular. Good luck!";
+                break;
+            case "Wolf":
+                hours = "during the late afternoon and eveing."
+                break;
+            case "Lion":
+                hours = "during the early morning.";
+                break;
+            default:
+                hours = "Please take the chronotype survey.";
+        }
+        return  hours;
+    };
+
+    const localUrl = `http://localhost:3301`;
+    const url = `https://group3backend-lukfolvarsky.onrender.com`;
+    
+
+    const getAverageStartTime = async () => {
+        const result = await axios.get(`${url}/gCal/events/average-start-time/${auth0UserData.sub}`)
+        setAverageStartTime(result.data);
+    };
+
+    useEffect(() => {
+        try {
+            getAverageStartTime();
+        } catch(error) {
+            if (error.response.status === 401) {
+                logout({
+                    logoutParams: {
+                      returnTo: window.location.origin,
+                    },
+                  });
+            } else {
+                console.log(error);
+            }
+        }
+        
+    }, []);
+
 
     return (
         <>
@@ -13,11 +71,17 @@ export default function DashboardGridThirdRow () {
                 mt={18}
             >
                 <div className='UnsTimCard'>
-                <h2 className='DashboardTitle'>Unscheduled Time</h2>
+                <h2 className='DashboardTitle'>Average Event Start Time</h2>
                 <div className='UnsTim'>
                     <div className='UnsTim-wrapper'>
                         <p className='UnsTim-text'>
-                            (unfilledPercent) of your calendar was unscheduled time this (timeframe)
+                            On average your calendar events begin at <strong>{averageStartTime}</strong>. 
+                            {chronotype !== ("Empty" || undefined) ? 
+                                <div className='UnsTim-text'>
+                                    Based on your chronotype of <strong>{chronotype}</strong>, your most productive period is {setProductiveHours()}.
+                                </div> : 
+                                <div>{setProductiveHours()}</div>     
+                            }
                         </p>
                     </div>
                 </div>
@@ -27,7 +91,7 @@ export default function DashboardGridThirdRow () {
                 gridColumn="span 3"
                 mt={18}
             >
-                <div className='MeeTimCard'>
+                {/* <div className='MeeTimCard'>
                 <h2 className='DashboardTitle'>Meeting Time</h2>
                 <div className='MeeTim'>
                     <div className='MeeTim-wrapper'>
@@ -36,7 +100,7 @@ export default function DashboardGridThirdRow () {
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
             </Box>
             <Box 
                 gridColumn="9/12" 
