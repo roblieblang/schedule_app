@@ -32,11 +32,8 @@ export default function DashboardGridFirstRow ({ chronotype, setChronotype }) {
             const response = await axios.get(`${url}/gcal/events/list/${auth0UserData.sub}`);
             setAllEvents(response.data);
         } catch (error) {
-            if (error.response.status === 401 || error.response.status === 500) {
-                handleLogout();
-            } else {
-                console.log(error);
-            }
+            handleLogout();
+            console.log("Logging out...");
         }
     };
     
@@ -45,11 +42,8 @@ export default function DashboardGridFirstRow ({ chronotype, setChronotype }) {
             const response = await axios.get(`${url}/gcal/events/meetings/${auth0UserData.sub}`);
             setMeetings(response.data);
         } catch (error) {
-            if (error.response.status === 401 || error.response.status === 500) {
-                handleLogout();
-            } else {
-                console.log(error);
-            }
+            handleLogout();
+            console.log("Logging out...");
         }
     };
 

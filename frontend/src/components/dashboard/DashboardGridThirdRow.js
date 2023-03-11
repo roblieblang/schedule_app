@@ -53,11 +53,8 @@ export default function DashboardGridThirdRow ({ chronotype }) {
             const result = await axios.get(`${url}/gCal/events/average-start-time/${auth0UserData.sub}`);
             setAverageStartTime(result.data);
         } catch (error) {
-            if (error.response.status === 401 || error.response.status === 500) {
-                handleLogout();
-            } else {
-                console.log(error);
-            }
+            handleLogout();
+            console.log("Logging out...");
         }
     };
     
