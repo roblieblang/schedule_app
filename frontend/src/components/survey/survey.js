@@ -1,11 +1,9 @@
 import React from "react";
 import { MDBContainer, MDBRadio } from "mdb-react-ui-kit";
 import { useState, useEffect } from 'react';
-// import SubmitSurvey from "../buttons/SurveySubmitButton";
 import "./survey.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-//import { Container } from "@mui/system";
 
 export default function Card() {
 
@@ -18,7 +16,11 @@ export default function Card() {
 
   const url = `https://group3backend-lukfolvarsky.onrender.com`; 
   // const url = `https://group3backend-lukfolvarsky.onrender.com/usersInformation/users/exists?uid=`;
-  const auth0UserData = JSON.parse(window.localStorage.getItem('@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email')).body.decodedToken.user;
+
+  const auth0UserData = JSON.parse(
+    window.localStorage.getItem(
+        '@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email'))
+            .body.decodedToken.user;
 
   const updateChronotype = async () => {
       await axios.put(`${url}/usersInformation/update/user/chronotype`, 

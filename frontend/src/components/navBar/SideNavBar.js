@@ -1,5 +1,5 @@
 import { Drawer, List, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
-import {CalendarMonth, Schedule, FactCheck, Dashboard, SurfingOutlined} from '@mui/icons-material/';
+import {CalendarMonth, Schedule, FactCheck, Dashboard} from '@mui/icons-material/';
 import Typography  from '@mui/material/Typography';
 
 export const drawerWidth = 240
