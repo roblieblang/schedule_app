@@ -7,7 +7,11 @@ export default function ChronoSummary () {
 
   // const url = `http:///localhost:3301`; 
   const url = `https://group3backend-lukfolvarsky.onrender.com`; 
-  const auth0UserData = JSON.parse(window.localStorage.getItem('@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email')).body.decodedToken.user;
+  
+  const auth0UserData = JSON.parse(
+    window.localStorage.getItem(
+        '@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email'))
+            .body.decodedToken.user;
 
   const getChronoType = async () => {
     const response = await axios.get(`${url}/usersInformation/users/chronotype/results?uid=${auth0UserData.sub}`);
