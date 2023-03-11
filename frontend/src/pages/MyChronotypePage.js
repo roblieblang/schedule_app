@@ -12,7 +12,11 @@ const MyChronotypePage = () => {
     const [userChronotype, setUserChronotype] = useState("");
 
     const url = `https://group3backend-lukfolvarsky.onrender.com`; 
-    const auth0UserData = JSON.parse(window.localStorage.getItem('@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email')).body.decodedToken.user;
+    
+    const auth0UserData = JSON.parse(
+        window.localStorage.getItem(
+            '@@auth0spajs@@::SvoR32C9SM8Ze4yeGVnvWGcPt7NP8eLu::https://schedule-app.dev.com::openid profile email'))
+                .body.decodedToken.user;
 
     const getChronoType = async () => {
         const response = await axios.get(`${url}/usersInformation/users/chronotype/results?uid=${auth0UserData.sub}`);
@@ -25,7 +29,7 @@ const MyChronotypePage = () => {
         setUserChronotype(userChronotype);
     }, []);
     console.log(userChronotype.chrono_name)
-    if (userChronotype.chrono_name === 'Empty') {
+    if (userChronotype.chrono_name === "Empty" || userChronotype.chrono_name === undefined) {
         return (
             <>
                 <NavBar />
