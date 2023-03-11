@@ -30,7 +30,11 @@ export default function DashboardGridFirstRow ({ chronotype, setChronotype }) {
       const getAllEvents = async () => {
         try {
             const response = await axios.get(`${url}/gcal/events/list/${auth0UserData.sub}`);
-            setAllEvents(response.data);
+            if (response.data){
+                setAllEvents(response.data);
+            } else{
+                handleLogout();
+            }
         } catch (error) {
             handleLogout();
             console.log("Logging out...");
