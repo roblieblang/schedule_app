@@ -28,7 +28,7 @@ const MyChronotypePage = () => {
         const userChronotype = getChronoType();
         setUserChronotype(userChronotype);
     }, []);
-    console.log(userChronotype.chrono_name)
+    // console.log(userChronotype.chrono_name)
     if (userChronotype.chrono_name === "Empty" || userChronotype.chrono_name === undefined) {
         return (
             <>

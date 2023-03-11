@@ -10,7 +10,6 @@ const scheduleMenuItems =[
 ];
 const chronotypeMenuItems =[
     {text: "My Chronotype", icon: <Schedule />, path: "/mychronotype"},
-    // {text: "Google Calendar API", icon: <SurfingOutlined />, path: "/google-api"},
     {text: "Interesting Facts", icon: <FactCheck />, path: "/interestingfacts"},
 ]
 

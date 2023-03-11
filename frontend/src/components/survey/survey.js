@@ -15,7 +15,6 @@ export default function Card() {
   };
 
   const url = `https://group3backend-lukfolvarsky.onrender.com`; 
-  // const url = `https://group3backend-lukfolvarsky.onrender.com/usersInformation/users/exists?uid=`;
 
   const auth0UserData = JSON.parse(
     window.localStorage.getItem(
@@ -57,7 +56,6 @@ export default function Card() {
       setChronotypeResult('Lion');
     }
 
-    // console.log("flag 2");
   };
 
   useEffect(() => {

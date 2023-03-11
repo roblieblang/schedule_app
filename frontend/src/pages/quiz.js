@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './quiz.css';
-import  QuizData from '../data/QuizData';
 
 function quiz() {
         return (

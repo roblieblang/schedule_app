@@ -27,7 +27,6 @@ export default function App() {
         <Route path="/profile" exact element={<ProfilePage/>} />
         <Route path="/calendar" exact element={<CalendarPage/>} />
         <Route path="/mychronotype" exact element={<MyChronotypePage/>} />
-        {/* <Route path="/google-api" exact element={<GoogleApiPage />} /> */}
         <Route path="mychronotype/quiz" exact element={<Card/>} />
         <Route path="/interestingfacts" exact element={<InterestingFactsPage/>} />
       </Routes>
