@@ -6,7 +6,6 @@ import ProfilePage from "./pages/ProfilePage";
 import CalendarPage from "./pages/CalendarPage.js"
 import Dashboard from './pages/DashboardPage';
 import MyChronotypePage from './pages/MyChronotypePage.js';
-// import GoogleApiPage from "./apis/GoogleApiPage.js";
 import Card from './components/survey/survey';
 import InterestingFactsPage from './pages/InterestingFactsPage';
 import './App.css';

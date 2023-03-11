@@ -10,8 +10,6 @@ function quiz() {
         )
     }
 
-
-
 export default quiz;
 
 
