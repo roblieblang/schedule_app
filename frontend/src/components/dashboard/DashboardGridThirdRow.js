@@ -39,28 +39,30 @@ export default function DashboardGridThirdRow ({ chronotype }) {
 
     const localUrl = `http://localhost:3301`;
     const url = `https://group3backend-lukfolvarsky.onrender.com`;
+
+    const handleLogout = () => {
+        logout({
+          logoutParams: {
+            returnTo: window.location.origin,
+          },
+        });
+      };
     
-
     const getAverageStartTime = async () => {
-        const result = await axios.get(`${url}/gCal/events/average-start-time/${auth0UserData.sub}`)
-        setAverageStartTime(result.data);
-    };
-
-    useEffect(() => {
         try {
-            getAverageStartTime();
-        } catch(error) {
-            if (error.response.status === 401) {
-                logout({
-                    logoutParams: {
-                      returnTo: window.location.origin,
-                    },
-                  });
+            const result = await axios.get(`${url}/gCal/events/average-start-time/${auth0UserData.sub}`);
+            setAverageStartTime(result.data);
+        } catch (error) {
+            if (error.response.status === 401 || error.response.status === 500) {
+                handleLogout();
             } else {
                 console.log(error);
             }
         }
-        
+    };
+    
+    useEffect(() => {
+        getAverageStartTime();
     }, []);
 
 

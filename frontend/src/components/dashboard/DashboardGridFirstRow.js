@@ -19,33 +19,43 @@ export default function DashboardGridFirstRow ({ chronotype, setChronotype }) {
     const [allEvents, setAllEvents] = useState([]);
     const [meetings, setMeetings] = useState([]);
 
+    const handleLogout = () => {
+        logout({
+          logoutParams: {
+            returnTo: window.location.origin,
+          },
+        });
+      };
 
-    const getAllEvents = async () => {
-        const response = await axios.get(`${url}/gcal/events/list/${auth0UserData.sub}`);
-        setAllEvents(response.data)
-    };
-    const getMeetings = async () => {
-        const response = await axios.get(`${url}/gcal/events/meetings/${auth0UserData.sub}`);
-        setMeetings(response.data);
-    }
-
-    useEffect(() => {
-
+      const getAllEvents = async () => {
         try {
-            getAllEvents();
-            getMeetings();
-        } catch(error) {
-            if (error.response.status === 401) {
-                logout({
-                    logoutParams: {
-                      returnTo: window.location.origin,
-                    },
-                  });
+            const response = await axios.get(`${url}/gcal/events/list/${auth0UserData.sub}`);
+            setAllEvents(response.data);
+        } catch (error) {
+            if (error.response.status === 401 || error.response.status === 500) {
+                handleLogout();
             } else {
                 console.log(error);
             }
         }
+    };
+    
+    const getMeetings = async () => {
+        try {
+            const response = await axios.get(`${url}/gcal/events/meetings/${auth0UserData.sub}`);
+            setMeetings(response.data);
+        } catch (error) {
+            if (error.response.status === 401 || error.response.status === 500) {
+                handleLogout();
+            } else {
+                console.log(error);
+            }
+        }
+    };
 
+    useEffect(() => {
+        getAllEvents();
+        getMeetings();
     }, []);
 
     useEffect(() => {
